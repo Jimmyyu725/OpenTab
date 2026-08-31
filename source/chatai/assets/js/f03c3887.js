@@ -1,0 +1,35 @@
+"use strict";
+
+(globalThis.webpackChunkinfinity_hitab_client = globalThis.webpackChunkinfinity_hitab_client || []).push([[369], {
+  5369: (e, t, a) => {
+    a.r(t);
+    var n = a(143);
+    class i extends n.ou {
+      loadStore = async () => {
+        const {
+          useChatGptStore: e
+        } = await Promise.all([a.e(652), a.e(172)]).then(a.bind(a, 1172));
+        e();
+      };
+      addWidget = async e => {};
+      preRender = async e => {};
+      renderHome = async e => {
+        const {
+          mountHome: t
+        } = await Promise.all([a.e(652), a.e(172), a.e(533), a.e(371)]).then(a.bind(a, 3214));
+        setTimeout(() => Promise.all([a.e(942), a.e(652), a.e(172), a.e(533), a.e(198)]).then(a.bind(a, 6215)), 20);
+        return t(e.container, e.state);
+      };
+      openModal = async () => {
+        await Promise.all([a.e(942), a.e(652), a.e(172), a.e(533), a.e(198)]).then(a.bind(a, 6215));
+        const {
+          useChatGptStore: e
+        } = await Promise.all([a.e(652), a.e(172)]).then(a.bind(a, 1172));
+        const t = e();
+        t.setPanelShowType("chatai-double11");
+        t.setModal(true);
+      };
+    }
+    (0, n.z2)("widget-chatgpt", new i());
+  }
+}]);

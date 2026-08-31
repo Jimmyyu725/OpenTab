@@ -1,0 +1,4864 @@
+(window.webpackJsonp = window.webpackJsonp || []).push([[7], {
+  164: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return l;
+    });
+    i.d(t, "f", function () {
+      return d;
+    });
+    i.d(t, "g", function () {
+      return u;
+    });
+    i.d(t, "c", function () {
+      return p;
+    });
+    i.d(t, "e", function () {
+      return h;
+    });
+    i.d(t, "b", function () {
+      return g;
+    });
+    i.d(t, "d", function () {
+      return b;
+    });
+    var n = i(5);
+    var s = i.n(n);
+    i(7);
+    var a = i(23);
+    var o = i.n(a);
+    var c = i(36);
+    var r = i(165);
+    async function l(e) {
+      let t;
+      t = await fetch(e).then(e => e.blob());
+      return t;
+    }
+    const d = (e, t = 0) => new s.a(i => {
+      let n = document.createElement("img");
+      n.onload = () => i(true);
+      n.onerror = () => i(false);
+      n.src = e;
+      if (t > 0) {
+        setTimeout(() => {
+          n.src = "";
+          n = null;
+          i(false);
+        }, t);
+      }
+    });
+    const u = e => o.a.setItem(c.e, e);
+    function p() {
+      return o.a.getItem(c.e);
+    }
+    function h(e) {
+      return !["image/gif"].includes(e.type) && e.size > window.__INFINITY__.maxLocalFileSize;
+    }
+    function g(e, t = "cloud") {
+      return e.map(e => ({
+        type: t,
+        id: e._id,
+        url: e.url,
+        content: e.thumbnail,
+        like: e.like,
+        source: e.source,
+        rawUrl: e.rawUrl
+      }));
+    }
+    function b(e) {
+      return e.map(e => {
+        const {
+          content: t,
+          url: i,
+          rawUrl: n
+        } = Object(r.convertURL)(e.url);
+        e.type = "user-library";
+        e.content = t;
+        e.url = i;
+        e.rawUrl = n;
+        return e;
+      });
+    }
+  },
+  251: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "j", function () {
+      return c;
+    });
+    i.d(t, "a", function () {
+      return r;
+    });
+    i.d(t, "n", function () {
+      return u;
+    });
+    i.d(t, "g", function () {
+      return p;
+    });
+    i.d(t, "f", function () {
+      return h;
+    });
+    i.d(t, "e", function () {
+      return g;
+    });
+    i.d(t, "d", function () {
+      return b;
+    });
+    i.d(t, "c", function () {
+      return y;
+    });
+    i.d(t, "b", function () {
+      return m;
+    });
+    i.d(t, "p", function () {
+      return w;
+    });
+    i.d(t, "h", function () {
+      return v;
+    });
+    i.d(t, "m", function () {
+      return O;
+    });
+    i.d(t, "o", function () {
+      return j;
+    });
+    i.d(t, "i", function () {
+      return k;
+    });
+    i.d(t, "l", function () {
+      return I;
+    });
+    i.d(t, "k", function () {
+      return _;
+    });
+    var n = i(6);
+    var s = i(0);
+    var a = i(51);
+    var o = i(36);
+    const c = {
+      name: Object(n.i18n)("search"),
+      uuid: "dd3af9cc97ad7de8984baaf59514bb52",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/mychromesearch.png",
+      desc: "",
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://www.google.com/search?q="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://www.google.com/search?tbm=isch&q="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://www.google.com/search?tbm=nws&q="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://www.google.com/search?tbm=vid&q="
+      }, {
+        name: Object(n.i18n)("map"),
+        url: "https://www.google.com/maps/preview?q="
+      }]
+    };
+    const r = {
+      name: Object(n.i18n)("baidu"),
+      uuid: "0c47016a8cd2d631bc618d4f3a741335",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/baidu.png",
+      desc: Object(n.i18n)("most_used_in_chinese"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://www.baidu.com/s?tn=75144485_dg&ch=3&ie=utf-8&wd="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://image.baidu.com/search/index?isource=infinity&iname=baidu&tn=baiduimage&word="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://news.baidu.com/ns?isource=infinity&iname=baidu&tn=news&ie=utf-8&word="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://video.baidu.com/v?isource=infinity&iname=baidu&ie=utf-8&word="
+      }, {
+        name: Object(n.i18n)("map"),
+        url: "http://map.baidu.com/?isource=infinity&iname=baidu&newmap=1&ie=utf-8&s=s%26wd%3D"
+      }]
+    };
+    const l = {
+      name: Object(n.i18n)("google"),
+      uuid: "a22dcc25c75de3f58cb518e32c576865",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/google.png",
+      desc: Object(n.i18n)("google_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://www.google.com/search?q="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://www.google.com/search?isource=infinity&iname=google&tbm=isch&q="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://www.google.com/search?isource=infinity&iname=google&tbm=nws&q="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://www.google.com/search?isource=infinity&iname=google&tbm=vid&q="
+      }, {
+        name: Object(n.i18n)("map"),
+        url: "https://www.google.com/maps/preview?isource=infinity&iname=google&q="
+      }]
+    };
+    const d = {
+      name: Object(n.i18n)("bing"),
+      uuid: "5a6afaa65c95a841f6149c4e1591a637",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/bing_new.png",
+      desc: Object(n.i18n)("bing_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://cn.bing.com/search?isource=infinity&iname=bing&itype=web&q="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://cn.bing.com/images/search?isource=infinity&iname=bing&q="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://global.bing.com/news/search?isource=infinity&iname=bing&q="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://cn.bing.com/videos/search?isource=infinity&iname=bing&q="
+      }, {
+        name: Object(n.i18n)("map"),
+        url: "https://www.bing.com/ditu/?isource=infinity&iname=bing&q="
+      }]
+    };
+    const u = [r, d, {
+      name: Object(n.i18n)("yahoo"),
+      uuid: "C26068F55492EF9E93E05E34A3B31139",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/yahoo.png",
+      desc: Object(n.i18n)("yahoo_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://search.yahoo.com/search?isource=infinity&iname=yahoo&itype=web&p="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://images.search.yahoo.com/search?isource=infinity&iname=yahoo&p="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://news.search.yahoo.com/search?isource=infinity&iname=yahoo&p="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://video.search.yahoo.com/search/video?isource=infinity&iname=yahoo&p="
+      }]
+    }, {
+      name: Object(n.i18n)("yandex"),
+      uuid: "f33155f8c51a36fb76dad667dec7e44f",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/yandex.png",
+      desc: Object(n.i18n)("yandex_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://yandex.com/search/?isource=infinity&itype=web&iname=yandex&text="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://yandex.com/images/search?isource=infinity&iname=yandex&text="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://news.yandex.com/yandsearch?isource=infinity&iname=yandex&text="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://yandex.com/video/search?isource=infinity&iname=yandex&text="
+      }]
+    }, {
+      name: Object(n.i18n)("duckduckgo"),
+      uuid: "569CD6FB4F6502B918DB8B30EC235384",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/duckduckgo.png",
+      desc: Object(n.i18n)("duckduckgo_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://duckduckgo.com/?isource=infinity&iname=duckduckgo&itype=web&q="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://duckduckgo.com/?isource=infinity&iname=duckduckgo&t=h_&dbexp=a&iax=1&ia=images&q="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://duckduckgo.com/?isource=infinity&iname=duckduckgo&t=h_&dbexp=a&ia=news&q="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://duckduckgo.com/?isource=infinity&iname=duckduckgo&t=h_&iax=1&ia=videos&q="
+      }]
+    }, {
+      name: Object(n.i18n)("n_360"),
+      uuid: "70adaba7374f6089aca0374dea85df00",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/360.png",
+      desc: Object(n.i18n)("360_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://www.so.com/s?src=lm&ls=sm2054017&lm_extend=ctype:4&q="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://image.so.com/i?isource=infinity&iname=360&src=infinitynewtab&q="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "http://news.so.com/ns?isource=infinity&iname=360&src=infinitynewtab&q="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "http://video.so.com/v?isource=infinity&iname=360&src=infinitynewtab&q="
+      }]
+    }, {
+      name: Object(n.i18n)("sougou"),
+      uuid: "a3e908082e31a92396970f8b58583863",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/sougou.png",
+      desc: Object(n.i18n)("sougou_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://www.sogou.com/sogou?isource=infinity&iname=sogou&itype=web&pid=sogou-site-7985672db979303a&query="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://pic.sogou.com/pics?isource=infinity&iname=sogou&ie=utf8&query="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "http://news.sogou.com/news?isource=infinity&iname=sogou&ie=utf8&query="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "http://v.sogou.com/v?isource=infinity&iname=sogou&ie=utf8&query="
+      }, {
+        name: Object(n.i18n)("wechat"),
+        url: "http://weixin.sogou.com/weixin?isource=infinity&iname=sogou&type=2&ie=utf8&query="
+      }]
+    }, {
+      name: Object(n.i18n)("yarndex_ru"),
+      uuid: "ff1ca8c4e6661d52440b7f2e15cb6a13",
+      logo: "https://infinity-permanent.infinitynewtab.com/infinity/search-add/russia-yandex.png",
+      desc: Object(n.i18n)("yandex_desc"),
+      types: [{
+        name: Object(n.i18n)("html"),
+        url: "https://yandex.ru/search/?text="
+      }, {
+        name: Object(n.i18n)("photos"),
+        url: "https://yandex.ru/images/search?text="
+      }, {
+        name: Object(n.i18n)("news"),
+        url: "https://news.yandex.ru/yandsearch?text="
+      }, {
+        name: Object(n.i18n)("videos"),
+        url: "https://yandex.ru/video/search?text="
+      }]
+    }];
+    const p = "6dcbbe4e9dc6ef2fd68da7d8befd117c";
+    const h = "https://www.infinitynewtab.com/jd.pro.html";
+    const g = "https://homepage.inftab.com/jd.pro.html";
+    const b = "5001b4d70b1c62f14859b51a6e8abd6f";
+    const y = "https://games.infinitynewtab.com/";
+    const m = "https://games.inftab.com/";
+    const f = {
+      "zh-CN": [{
+        name: Object(n.i18n)("settings"),
+        uuid: "552fa3a378b29375843fa3d021cbe129",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/9622b98e90dd4f107d23481566095b34.png",
+        type: "app",
+        target: "infinity://settings"
+      }, {
+        name: "京东商城",
+        uuid: p,
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/cee009549b352def723ba09d6da4b742.png",
+        type: "web",
+        target: g
+      }, {
+        name: "天猫精选",
+        uuid: "be0ab26cf4dc6239c98791f7b18b633a",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/2f301c86bb2d0efeec3d49930147157f.png",
+        type: "web",
+        target: "https://s.click.taobao.com/t?e=m%3D2%26s%3DV5ucSP%2F1kT4cQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMRBynALhehQ4RitN3%2FurF3xNWm%2FATOfjswMAKinyMfntv%2FFgqkVH8133BMlVy3qlGE2srC8Mk09eQgZss1jm63jcHtRpEUy6RPalRWTdFmFpJPwiig1bxLMnyi1UQ%2F17I10hO9fBPG8oXH%2BQH9e66Y4%3D"
+      }, {
+        name: "爱淘宝",
+        uuid: "c34f380f9d9136fc3b4dbd32f24feea3",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/346647fb95fbac4d303c93fa0a4936d3.png",
+        type: "web",
+        target: "https://ai.taobao.com/?pid=mm_50570328_39070332_145428725"
+      }, {
+        name: "唯品会",
+        uuid: "237ae8efe805e4bd741fa32f040b4571",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/150127100741.png.png",
+        target: "http://click.union.vip.com/redirect.php?url=eyJjaGFuIjoiaW5maW5pdHkiLCJhZGNvZGUiOiI5dnpnMHBxYiIsInNjaGVtZWNvZGUiOiJmNWEwNWQ2NiIsInVjb2RlIjoibWQyd2dycnUifQ==",
+        type: "web"
+      }, {
+        name: "稿定设计",
+        uuid: "f0b90e0f436466b121ebcc46297cbfc1",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/f0b90e0f436466b121ebcc46297cbfc1.png",
+        target: "https://www.gaoding.com/utms/6ab367adcc9945e38f24ebec652c295e ",
+        type: "web"
+      }, {
+        name: "百度",
+        uuid: "aeb990ca3978666676b1fbb811bb0dfc",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/c9f7546ad597dd7fb53e8129b6c07877.png",
+        target: "https://www.baidu.com/?tn=44004473_48_oem_dg&ie=utf-8",
+        type: "web"
+      }, {
+        name: "论文猫",
+        uuid: "ebd5cc9193bde437e76de2ca1abd2121",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/ebd5cc9193bde437e76de2ca1abd2121.png",
+        target: "https://papercat.pro?pic=gk2W",
+        type: "web"
+      }, {
+        name: "携程网",
+        uuid: "afe7a96e6db449e6199df118756d5672",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/1502895222082.png",
+        target: "http://www.ctrip.com/?allianceid=1050724&sid=1786019",
+        type: "web"
+      }, {
+        name: "DeepSider",
+        uuid: "dbd6895d645eceb05cbcc5926952c505",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/dbd6895d645eceb05cbcc5926952c505.png",
+        target: "https://deepsider.ai/?utm_source=infinity",
+        type: "web"
+      }, {
+        name: "爱奇艺",
+        uuid: "3d3a7777700d30c5f29be964835f398d",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/226c6aff617dbc253ce26d23be07c446.png",
+        target: "https://www.iqiyi.com/?vfm=m_470_zhd&fv=97e6d58de4b83d39",
+        type: "web"
+      }, {
+        name: "狐猴",
+        uuid: "7e6e38a85dc4b7873d6e36ae00753142",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/7e6e38a85dc4b7873d6e36ae00753142.png",
+        target: "https://www.lemurbrowser.com/app/zh/?utm_source=infinity",
+        type: "web"
+      }, {
+        name: "Infinity Games",
+        uuid: b,
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/5001b4d70b1c62f14859b51a6e8abd6f.png",
+        type: "web",
+        target: m
+      }, {
+        name: "Infinitytab",
+        uuid: "bc545d7b32d3dc84c3041ca092fb2689",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/bc545d7b32d3dc84c3041ca092fb2689.png",
+        type: "web",
+        target: "https://www.infinitytab.com/?utm_source=extension"
+      }, (s.i || s.k) && {
+        name: "扩展管理",
+        uuid: "194dd7b46ac16ac93becf5386f14bcca",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/194dd7b46ac16ac93becf5386f14bcca.png",
+        type: "app",
+        target: "infinity://extension"
+      }, {
+        name: "壁纸库",
+        uuid: "76e8e8a1cb47ef88dc9faaf52167aa9a",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/76e8e8a1cb47ef88dc9faaf52167aa9a.png",
+        type: "app",
+        target: "infinity://wallpaper"
+      }, s.k && {
+        name: Object(n.i18n)("edge_app_store"),
+        uuid: "744e63c4998c83753d7d37a4fbd3e26f",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/eeedf66223852ae037aa58284858187d.png",
+        type: "web",
+        target: "https://microsoftedge.microsoft.com/addons"
+      }, s.n && {
+        name: Object(n.i18n)("firefox_app_store"),
+        uuid: "743965befe82a5255fb48dcf7b848bbb",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/7ef4532818b99d9320879c3e4979fc01.png",
+        type: "web",
+        target: "https://addons.mozilla.org"
+      }, {
+        name: "小米有品",
+        uuid: "f3e3cb59c45d1bc6687b8393b4f271b1",
+        bgType: "image",
+        bgImage: "https://infinitypro-img.infinitynewtab.com/custom-icon/9001cf4suf1jwn7y3b7juxl0x1tpbc.png",
+        target: "https://c.duomai.com/track.php?aid=4705&dm_fid=16055&euid=infinity&site_id=950780&t=https%3A%2F%2Fwww.xiaomiyoupin.com",
+        type: "web"
+      }, {
+        name: "哔哩哔哩",
+        uuid: "ae50fb1b26d79a1a7bf89b02b5d30fb1",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/d8b62f4d64bda8800b1c788cd5ba3c68.png",
+        target: "http://www.bilibili.com/",
+        type: "web"
+      }, {
+        name: "知乎",
+        uuid: "86626e617258ad15b93e249c8d81a9f4",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/2b89ebe968d8cafe77a5c587daa79c7f.png",
+        target: "https://www.zhihu.com/",
+        type: "web"
+      }, {
+        name: "GitHub",
+        uuid: "a23b4cf17327527ae66aad5d13f059da",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/a23b4cf17327527ae66aad5d13f059da.png",
+        target: "https://github.com/",
+        type: "web"
+      }, {
+        name: "华为商城",
+        uuid: "940dba4bb4740f5340b2115a90582e6b",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/940dba4bb4740f5340b2115a90582e6b.png",
+        target: "https://c.duomai.com/track.php?aid=387&dm_fid=16055&euid=infinity&site_id=950780&t=https%3A%2F%2Fwww.vmall.com%2Findex.html",
+        type: "web",
+        bgColor: ""
+      }, {
+        name: "斗鱼",
+        uuid: "78f61134f1b7826bd587ac290b1781e1",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/66f3d54ad9a6e62fbcb13bbf96211f67.png",
+        target: "http://www.douyutv.com/",
+        type: "web"
+      }, {
+        name: "当当网",
+        uuid: "25bbf99ce3252149703a0a9b71dcd6b3",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/513b4167dd3c9bfd83f6ceae56d7bf7f.png",
+        target: "http://union.dangdang.com/transfer.php?from=P-319540-infinity&amp;amp;amp;ad_type=10&amp;amp;amp;sys_id=1&amp;amp;amp;backurl=http://www.dangdang.com",
+        type: "web"
+      }, {
+        name: "微软",
+        uuid: "422f830b299a5d3a3f3c4d5a939d25bf",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/2f580fd771401efdc2118f0562e3ab45.png",
+        target: "https://c.duomai.com/track.php?aid=2649&dm_fid=16052&euid=infinity&site_id=339485&t=https%3A%2F%2Fwww.microsoftstore.com.cn",
+        type: "web"
+      }, {
+        name: "新浪微博",
+        uuid: "0485f5de0396bd313ec0e4ab22080bb9",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/0f2ab700f8fff5b6e9ebc7d6a976981f.png",
+        target: "http://weibo.com/",
+        type: "web"
+      }],
+      default: [{
+        uuid: "080772d54828d47e7f8ce223c66f36df",
+        name: "Booking",
+        target: "https://www.booking.com/index.html?aid=1267011",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/83e58c13ed40dc8393297d43d2639cce.png",
+        bgType: "image",
+        type: "web"
+      }, {
+        uuid: "66117abb3659ad746baadc8c1e0b28df",
+        name: "Twitter",
+        target: "https://twitter.com",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/0c7e5d8b40c38cde576595b23546cc91.png",
+        bgType: "image",
+        type: "web"
+      }, {
+        uuid: "4299970b2e054e9a39450e6f854a684c",
+        name: "Amazon",
+        target: "https://sovrn.co/11h5wnr",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/e67eed044bf08fbcac16a0527fcc165a.png",
+        bgType: "image",
+        type: "web"
+      }, {
+        uuid: "912ed4e109a1cde4b956fa8a1670fae2",
+        name: "eBay",
+        target: "https://www.ebay.com/?mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339103610&customid=infinity&toolid=10001&mkevt=1",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/ebay.png",
+        bgType: "image",
+        type: "web"
+      }, {
+        name: "Youtube",
+        uuid: "60e546111669c1d829f962c8831a0926",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/37d396f9975e494b10ac8696d64ebb2a.png",
+        type: "web",
+        target: "https://youtube.com"
+      }, {
+        name: "Gmail",
+        uuid: "01d0a35ebb602dde4dadd63887cc2a91",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/gmail_2.png",
+        type: "app",
+        target: "infinity://gmail"
+      }, {
+        name: "AliExpress",
+        uuid: "c4cbd39c0ff571475f3f4d09df79426c",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/07ec46eac62dca559954f3c21736b5c0.png",
+        target: "http://s.click.aliexpress.com/e/jy3RvNn",
+        type: "web"
+      }, {
+        name: "Settings",
+        uuid: "552fa3a378b29375843fa3d021cbe129",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/9622b98e90dd4f107d23481566095b34.png",
+        type: "app",
+        target: "infinity://settings"
+      }, {
+        name: "Spotify",
+        uuid: "f91b1d1670595c8e7a5459fcc32ad0d4",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/a0fdd81b4dda32d7394a9151f6d274ef.png",
+        target: "https://sovrn.co/19egzal",
+        type: "web"
+      }, {
+        name: "Walmart",
+        uuid: "778bb326cdf44093d702f6f016754cec",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/150127100751.png",
+        target: "https://redirect.viglink.com?key=ddac7c192269498283581986ec8a9aaa&u=https%3A%2F%2Fwww.walmart.com%2F",
+        type: "web"
+      }, {
+        name: "Microsoft",
+        uuid: "cbad4a1402d12a5574cabf9c0cc10634",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/150127092730.png",
+        target: "https://sovrn.co/3to9uma",
+        type: "web"
+      }, {
+        name: "Lemur",
+        uuid: "24f02a8178e6236d22dc563857bf32f8",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/24f02a8178e6236d22dc563857bf32f8.png",
+        target: "https://www.lemurbrowser.com/app/en/?utm_source=infinity",
+        type: "web"
+      }, {
+        name: "Turbotax",
+        uuid: "b170651fde3c3b89289c588266c582a3",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/b170651fde3c3b89289c588266c582a3.png",
+        target: "https://sovrn.co/9mrq11x",
+        type: "web"
+      }, {
+        name: "Samsung",
+        uuid: "4f7ffdfa59a5879cba9bfd41e8b5b9f6",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/ea07e21040037300243e520d89e0e818.png",
+        target: "https://sovrn.co/15mhkmf",
+        type: "web"
+      }, {
+        name: "Alibaba",
+        uuid: "8c94edee5ce4c028a2fcd80fbaed84ea",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/656ff7858665d1adcc5efeba588d5871.png",
+        target: "http://www.alibaba.com/",
+        type: "web"
+      }, {
+        name: "Wallpapers library",
+        uuid: "76e8e8a1cb47ef88dc9faaf52167aa9a",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/76e8e8a1cb47ef88dc9faaf52167aa9a.png",
+        type: "app",
+        target: "infinity://wallpaper"
+      }, s.i && {
+        name: Object(n.i18n)("chrome_app_store"),
+        uuid: "744e698c837a43c49fbd3e26753d7d3f",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/d2085270ca1ded965bfaac2d2a6b12dc.png",
+        type: "web",
+        target: "https://chrome.google.com/webstore/category/extensions"
+      }, s.k && {
+        name: Object(n.i18n)("edge_app_store"),
+        uuid: "744e63c4998c83753d7d37a4fbd3e26f",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/eeedf66223852ae037aa58284858187d.png",
+        type: "web",
+        target: "https://microsoftedge.microsoft.com/addons"
+      }, s.n && {
+        name: Object(n.i18n)("firefox_app_store"),
+        uuid: "743965befe82a5255fb48dcf7b848bbb",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/7ef4532818b99d9320879c3e4979fc01.png",
+        type: "web",
+        target: "https://addons.mozilla.org"
+      }, {
+        name: "Infinitytab",
+        uuid: "bc545d7b32d3dc84c3041ca092fb2689",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/bc545d7b32d3dc84c3041ca092fb2689.png",
+        type: "web",
+        target: "https://www.infinitytab.com/?utm_source=extension"
+      }, {
+        name: "Infinity Games",
+        uuid: b,
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/5001b4d70b1c62f14859b51a6e8abd6f.png",
+        type: "web",
+        target: m
+      }, (s.i || s.k) && {
+        name: "Extensions",
+        uuid: "194dd7b46ac16ac93becf5386f14bcca",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/194dd7b46ac16ac93becf5386f14bcca.png",
+        type: "app",
+        target: "infinity://extension"
+      }, {
+        name: "Target",
+        uuid: "cdcca78e7ecbc8c627d51cc783a4fd07",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/79c6cad0aca11ad3b7726f075d9a5371.png",
+        target: "http://www.target.com",
+        type: "web"
+      }, {
+        name: "TripAdvisor",
+        uuid: "c4b68571e44bb47d16456c5182e590ee",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/9001c8a3ah8l05e5u2fqhoxf8rh9ek.png.png",
+        target: "https://redirect.viglink.com?key=ddac7c192269498283581986ec8a9aaa&u=https%3A%2F%2Fwww.tripadvisor.com%2F",
+        type: "web"
+      }, {
+        name: "Indeed",
+        uuid: "69a66cfb185c3aef3539de59316d8e28",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/69a66cfb185c3aef3539de59316d8e28.png",
+        target: "https://sovrn.co/o8pohng",
+        type: "web"
+      }, {
+        name: "Hulu",
+        uuid: "ae3c79247f84079e195ba1290e6c7946",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/150127092951.png",
+        target: "https://sovrn.co/c6vffrc",
+        type: "web"
+      }, {
+        name: "Lenovo",
+        uuid: "04d2045593f65a947d5d8a225e2d966d",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/04d2045593f65a947d5d8a225e2d966d.png",
+        target: "https://sovrn.co/1laxjon",
+        type: "web"
+      }, {
+        name: "macys",
+        uuid: "174e3ea9866bdaad35be4899a3890f5e",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/174e3ea9866bdaad35be4899a3890f5e.png",
+        target: "https://sovrn.co/0qtuyb4",
+        type: "web"
+      }, {
+        name: "Expedia",
+        uuid: "0aac2322924424d864d45919527a4bd9",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/0aac2322924424d864d45919527a4bd9.png",
+        target: "https://sovrn.co/1afrm3y",
+        type: "web"
+      }, {
+        name: "Airbnb",
+        uuid: "e76e90dc2b1acac991f19e82c58f5259",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/5bcf01b6d7301fd2adf4155a807262ac.png",
+        target: "https://sovrn.co/l1ewazi",
+        type: "web"
+      }, {
+        name: "AT&T",
+        uuid: "e0f4649ae91a59cb296b3f266cd9eb80",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/icon/e0f4649ae91a59cb296b3f266cd9eb80.png",
+        target: "https://sovrn.co/153zpbb",
+        type: "web"
+      }]
+    };
+    const w = {
+      name: Object(n.i18n)("weather"),
+      uuid: "eed2a9287b324510678cd5e714888e99",
+      bgType: "image",
+      bgImage: "https://infinityicon.infinitynewtab.com/assets/weather/default.png",
+      type: "app",
+      bgColor: "#36B3FF",
+      target: "infinity://weather"
+    };
+    const v = {
+      name: "Infinity AI",
+      uuid: "eed2a9287b324510678cd5e723788e11",
+      bgType: "image",
+      bgImage: "https://infinityicon.infinitynewtab.com/assets/infiityai-icon.png",
+      type: "app",
+      target: "infinity://chatai"
+    };
+    const O = e => [!o.a && s.l && v, w, {
+      name: Object(n.i18n)("todos"),
+      uuid: "c09f31db43d7faca5bf659fadad3967c",
+      bgType: "image",
+      bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/6e49210c084629259f22609980c48ecf.png",
+      type: "app",
+      target: "infinity://todos"
+    }, {
+      name: Object(n.i18n)("notes"),
+      uuid: "ea5ac5d9e9e08c1d57ad413e9e38d376",
+      bgType: "image",
+      bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/006b88c07a2e87d5a61f3c969a70575c.png",
+      type: "app",
+      target: "infinity://notes"
+    }, s.l && !s.r && {
+      name: Object(n.i18n)("folder"),
+      uuid: "folder-1gso53bkma3hh6lqtjkjpx7lyh1",
+      children: [{
+        name: Object(n.i18n)("bookmarks"),
+        uuid: "96646a13688f5bfd0aaf4811a579aee1",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/31a36139ccf4b9b005ec55445bf833b0.png",
+        type: "app",
+        target: "infinity://bookmarks"
+      }, {
+        name: Object(n.i18n)("history"),
+        uuid: "4528cef4f8d66e661cb3143af733694e",
+        bgType: "image",
+        bgImage: "https://infinityicon.infinitynewtab.com/user-share-icon/history_2.png",
+        type: "app",
+        target: "infinity://history"
+      }]
+    }, ...(f[e] || f.default)].filter(e => e).reduce((e, t, i) => {
+      t.id ||= "siteId-" + t.uuid;
+      t.updatetime = 0;
+      if (t.children) {
+        t.children.forEach(e => {
+          e.id = "siteId-" + e.uuid;
+          e.updatetime = 0;
+        });
+      }
+      const n = Math.floor(i / 18);
+      e[n] ||= [];
+      e[n].push(t);
+      return e;
+    }, []);
+    const j = [{
+      name: Object(n.i18n)("all_wallpaper_sources"),
+      value: "all",
+      desc: Object(n.i18n)("all_wallpaper_sources_desc"),
+      img: Object(a.a)("source-all.png", true)
+    }, {
+      name: Object(n.i18n)("infinity_landscape_wallpaper_source"),
+      value: "InfinityLandscape",
+      desc: Object(n.i18n)("infinity_landscape_wallpaper_source_desc"),
+      img: Object(a.a)("source-infinity-landscape.png", true)
+    }, {
+      name: Object(n.i18n)("infinity_comic_wallpaper_source"),
+      value: "Infinity",
+      desc: Object(n.i18n)("infinity_comic_wallpaper_source_desc"),
+      img: Object(a.a)("source-infinity-comic.png", true)
+    }, {
+      name: "Bing",
+      value: "bing",
+      desc: Object(n.i18n)("bing_wallpaper_source_desc"),
+      img: Object(a.a)("source-bing.png", true)
+    }, {
+      name: "Unsplash",
+      value: "Unsplash",
+      desc: Object(n.i18n)("unsplash_wallpaper_source_desc"),
+      img: Object(a.a)("source-unsplash.png", true)
+    }, {
+      name: "Life Of Pix",
+      value: "Life Of Pix",
+      desc: Object(n.i18n)("life_of_pix_wallpaper_source_desc"),
+      img: Object(a.a)("source-life-of-pix.png", true)
+    }, {
+      name: "MMT",
+      value: "MMT",
+      desc: Object(n.i18n)("mmt_wallpaper_source_desc"),
+      img: Object(a.a)("source-mmt.png", true)
+    }, {
+      name: "Realistic Shots",
+      value: "Realistic Shots",
+      desc: Object(n.i18n)("realistic_shots_wallpaper_source_desc"),
+      img: Object(a.a)("source-realistic-shots.png", true)
+    }, {
+      name: "Jay Mantri",
+      value: "Jay Mantri",
+      desc: Object(n.i18n)("jay_mantri_wallpaper_source_desc"),
+      img: Object(a.a)("source-jay-mantri.png", true)
+    }, {
+      name: "Free Nature Stock",
+      value: "Free Nature Stock",
+      desc: Object(n.i18n)("free_nature_stock_wallpaper_source_desc"),
+      img: Object(a.a)("source-free-nature-stock.png", true)
+    }, {
+      name: "Skitter Photo",
+      value: "Skitter Photo",
+      desc: Object(n.i18n)("skitter_photo_wallpaper_source_desc"),
+      img: Object(a.a)("source-skitter-photo.png", true)
+    }, {
+      name: "Startup Stock Photos",
+      value: "Startup Stock Photos",
+      desc: Object(n.i18n)("startup_stock_wallpaper_source_desc"),
+      img: Object(a.a)("source-startup-stock-photos.png", true)
+    }, {
+      name: "Barn Images",
+      value: "Barn Images",
+      desc: Object(n.i18n)("barn_images_wallpaper_source_desc"),
+      img: Object(a.a)("source-barn.png", true)
+    }, {
+      name: "Picography",
+      value: "Picography",
+      desc: Object(n.i18n)("picography_wallpaper_source_desc"),
+      img: Object(a.a)("source-picography.png", true)
+    }];
+    const k = ["c00018", "de8930", "f7d946", "cbe582", "506f37", "60a8d8", "184878", "be7ab9"];
+    const I = () => n.IS_ZH ? r : s.i ? c : d;
+    const _ = () => n.IS_ZH ? [Object.assign(Object.assign({}, r), {
+      updatetime: 0
+    }), Object.assign(Object.assign({}, d), {
+      updatetime: 0
+    })] : [Object.assign(Object.assign({}, d), {
+      updatetime: 0
+    }), Object.assign(Object.assign({}, l), {
+      updatetime: 0
+    })];
+  },
+  254: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "c", function () {
+      return s;
+    });
+    i.d(t, "a", function () {
+      return o;
+    });
+    i.d(t, "b", function () {
+      return c;
+    });
+    i(5);
+    i(19);
+    i(64);
+    i(7);
+    i(23);
+    i(0);
+    var n = i(36);
+    function s(e = 15, t = 0) {
+      const i = {
+        "--wallpaper-alpha": e / 100,
+        "--wallpaper-filter": t / 5 + "px"
+      };
+      Object.keys(i).forEach(e => {
+        document.body.style.setProperty(e, i[e]);
+      });
+    }
+    const a = document.querySelector(".wallpaper");
+    function o(e) {
+      a.style.backgroundImage &&= "";
+      a.style.backgroundColor = e;
+    }
+    const c = e => {
+      a.style.backgroundColor &&= "";
+      let t = e;
+      if (n.f) {
+        t = e.replace(n.g, "");
+      }
+      a.style.backgroundImage = `url(${t})`;
+    };
+  },
+  384: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return r;
+    });
+    i.d(t, "d", function () {
+      return l;
+    });
+    i.d(t, "b", function () {
+      return d;
+    });
+    i.d(t, "c", function () {
+      return u;
+    });
+    var n = i(5);
+    var s = i.n(n);
+    i(7);
+    var a = i(0);
+    var o = i(164);
+    var c = i(165);
+    function r(e) {
+      let t = 0;
+      switch (e) {
+        case "per-hour":
+          t = a.q ? 3600000 : 20000;
+          break;
+        case "twelve-hour":
+          t = 43200000;
+          break;
+        case "one-day":
+          t = 86400000;
+      }
+      return t;
+    }
+    async function l(e) {
+      let t;
+      var i;
+      t = typeof e == "string" ? await (i = e, fetch(i).then(e => e.blob())) : e;
+      return await new s.a((e, i) => {
+        const n = new FileReader();
+        n.readAsDataURL(t);
+        n.onload = () => {
+          e(n.result);
+        };
+        n.onerror = i;
+      });
+    }
+    async function d() {
+      const e = await Object(c.getBingWallpaper)();
+      if (e.error) {
+        throw e.error;
+      }
+      const [t] = Object(o.b)([e.data]);
+      return t;
+    }
+    async function u() {
+      const e = await Object(c.getCustomColor)();
+      if (!e.error) {
+        return e.data.map(e => {
+          e.type = "color";
+          return e;
+        });
+      }
+      console.warn(e.error);
+    }
+  },
+  474: function (e, t, i) {
+    e.exports = i.p + "images/wallpaper.c4eff18.webp";
+  },
+  602: function (e, t, i) {
+    "use strict";
+
+    i.r(t);
+    i.d(t, "syncStore", function () {
+      return E;
+    });
+    var n = i(5);
+    var s = i.n(n);
+    i(7);
+    var a = i(2);
+    var o = i(22);
+    var c = i(309);
+    var r = i(612);
+    var l = i(430);
+    var d = i(613);
+    var u = i(609);
+    var p = i(383);
+    var h = i(614);
+    var g = i(429);
+    var b = i(610);
+    var y = i(1);
+    var m = i(225);
+    var f = y.b`.container {
+  width: 410px;
+  box-sizing: border-box;
+  padding: 40px 40px 34px 40px;
+  background: #ffffff;
+  border-radius: 6px;
+}
+.header {
+  text-align: center;
+  line-height: 30px;
+  height: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333333;
+  line-height: 28px;
+}
+.main {
+  margin: 24px auto 40px;
+}
+.tips {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #656565;
+  line-height: 20px;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  cursor: pointer;
+}
+.checkbox .input-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.checkbox label {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.checkbox label::after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  border: 2px solid #333;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+.checkbox input {
+  visibility: hidden;
+}
+.checkbox input:checked + label::after {
+  opacity: 1;
+}
+.checkbox:last-of-type {
+  margin-bottom: 0;
+}
+.btn {
+  width: 330px;
+  height: 52px;
+}
+.footer-import {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn-import {
+  width: 155px;
+  height: 52px;
+}
+`;
+    function w(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    let v = class extends m.a {
+      constructor() {
+        super(...arguments);
+        this.onChecked = e => {};
+        this.show = false;
+        this.checked = 0;
+        this.handleCheck = e => {
+          this.show = false;
+          if (typeof this.onChecked == "function") {
+            this.onChecked(e);
+          }
+          this.checked = 0;
+          this.onChecked = () => {};
+        };
+      }
+      static create(e) {
+        const t = document.body.querySelector("#modal-first-sync");
+        if (t) {
+          if (!this.instance) {
+            const e = document.createElement("modal-first-sync");
+            t.appendChild(e);
+            this.instance = e;
+          }
+          this.instance.show = true;
+          this.instance.onChecked = e;
+          return this.instance;
+        }
+      }
+      static hide() {
+        if (this.instance && this.instance.show) {
+          this.instance.handleCheck(null);
+        }
+      }
+      firstUpdated() {}
+      checkOne(e) {
+        this.checked = e;
+      }
+      updated() {
+        this.radios[this.checked].checked = true;
+      }
+      render() {
+        return y.e`<infinito-modal style="--modal-padding:0;" .closeable="${false}" .open=${this.show}>
+      <div slot="body">
+        <div class="container">
+          <div class="header">${i18n("choose_sync_type")}</div>
+          <div class="main">
+            <div class="tips">${i18n("sync_type_tips")}</div>
+            <div class="checkbox-box">
+              <div class="checkbox" @click="${() => this.checkOne(0)}">
+                <div class="input-box">
+                  <input name="first_sync" type="radio" value="0" id="first_sync_0" />
+                  <label for="first_sync_0"></label>
+                </div>
+                <span>${i18n("merge_cloud_local")}</span>
+              </div>
+              <div class="checkbox" @click="${() => this.checkOne(1)}">
+                <div class="input-box">
+                  <input name="first_sync" type="radio" value="1" id="first_sync_1" />
+                  <label for="first_sync_1"></label>
+                </div>
+                <span>${i18n("use_local")}</span>
+              </div>
+              <div class="checkbox" @click="${() => this.checkOne(2)}">
+                <div class="input-box">
+                  <input name="first_sync" type="radio" value="2" id="first_sync_2" />
+                  <label for="first_sync_2"></label>
+                </div>
+                <span>${i18n("use_cloud")}</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <infinito-button
+              primary
+              class="btn"
+              @click="${() => {
+          this.handleCheck(this.checked);
+        }}"
+              >${i18n("confirm")}</infinito-button
+            >
+          </div>
+        </div>
+      </div>
+    </infinito-modal> `;
+      }
+    };
+    v.styles = f;
+    v.instance = null;
+    w([Object(y.g)()], v.prototype, "onChecked", undefined);
+    w([Object(y.g)({
+      type: Boolean
+    })], v.prototype, "show", undefined);
+    w([Object(y.g)({
+      type: Number
+    })], v.prototype, "checked", undefined);
+    w([Object(y.i)("[name=\"first_sync\"]")], v.prototype, "radios", undefined);
+    v = w([Object(y.c)("modal-first-sync")], v);
+    function O(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    let j = class extends m.a {
+      constructor() {
+        super(...arguments);
+        this.onChecked = e => {};
+        this.show = false;
+        this.checked = 0;
+        this.handleCheck = e => {
+          this.show = false;
+          if (typeof this.onChecked == "function") {
+            this.onChecked(e);
+          }
+          this.checked = 0;
+          this.onChecked = () => {};
+        };
+      }
+      static create(e) {
+        const t = document.body.querySelector("#modal-import-type");
+        if (t) {
+          if (!this.instance) {
+            const e = document.createElement("modal-import-type");
+            t.appendChild(e);
+            this.instance = e;
+          }
+          this.instance.show = true;
+          this.instance.onChecked = e;
+          return this.instance;
+        }
+      }
+      static hide() {
+        if (this.instance && this.instance.show) {
+          this.instance.handleCheck(null);
+        }
+      }
+      firstUpdated() {}
+      checkOne(e) {
+        this.checked = e;
+      }
+      updated() {
+        this.radios[this.checked].checked = true;
+      }
+      render() {
+        return y.e`<infinito-modal style="--modal-padding:0;" .closeable="${false}" .open=${this.show}>
+      <div slot="body">
+        <div class="container">
+          <div class="header">${i18n("import_select_tile")}</div>
+          <div class="main">
+            <div class="tips">${i18n("inportdata_desc")}</div>
+            <div class="checkbox-box">
+              <div class="checkbox" @click="${() => this.checkOne(0)}">
+                <div class="input-box">
+                  <input name="first_sync" type="radio" value="0" id="first_sync_0" />
+                  <label for="first_sync_0"></label>
+                </div>
+                <span>${i18n("merge_data")}</span>
+              </div>
+              <div class="checkbox" @click="${() => this.checkOne(1)}">
+                <div class="input-box">
+                  <input name="first_sync" type="radio" value="1" id="first_sync_1" />
+                  <label for="first_sync_1"></label>
+                </div>
+                <span>${i18n("overwrite_data")}</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer-import">
+            <infinito-button
+              class="btn-import"
+              @click="${() => {
+          this.handleCheck(null);
+        }}"
+              >${i18n("cancel")}</infinito-button
+            >
+            <infinito-button
+              primary
+              class="btn-import"
+              @click="${() => {
+          this.handleCheck(this.checked);
+        }}"
+              >${i18n("confirm")}</infinito-button
+            >
+          </div>
+        </div>
+      </div>
+    </infinito-modal> `;
+      }
+    };
+    j.styles = f;
+    j.instance = null;
+    O([Object(y.g)()], j.prototype, "onChecked", undefined);
+    O([Object(y.g)({
+      type: Boolean
+    })], j.prototype, "show", undefined);
+    O([Object(y.g)({
+      type: Number
+    })], j.prototype, "checked", undefined);
+    O([Object(y.i)("[name=\"first_sync\"]")], j.prototype, "radios", undefined);
+    j = O([Object(y.c)("modal-import-type")], j);
+    var k = i(161);
+    var I = i(384);
+    var _ = i(311);
+    var S = i(13);
+    function x(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    const C = [r.a, l.b, u.a, d.a, p.a, h.a, b.weatherStore];
+    class R extends c.a {
+      constructor() {
+        super(...arguments);
+        this.timmer = null;
+        this.downloading = false;
+        this.backuping = false;
+        this.isBackup = false;
+        this.isOpenSync = true;
+        this.syncId = "";
+        this.lastSyncTime = 0;
+        this.syncSucsess = false;
+        this.syncFail = false;
+        this.syncFailMsg = "";
+        this.autosSyncList = [];
+        this.waitMergeData = null;
+        this.waitMergeId = null;
+        this.manualSyncList = {};
+        this.isRecovered = false;
+        this.recoverErrorTimes = 0;
+        this.master = false;
+        this.prerender = [];
+        this.autoBackupPipe = {
+          data: {},
+          websocketKeys: [],
+          timestamp: 0
+        };
+        this.getAllBackupData = async () => {
+          const e = {};
+          await s.a.all(C.map(async t => {
+            const i = await t.getBackupData();
+            e[t.backupFileKey] = i;
+          }));
+          return e;
+        };
+        this.getAutoLatest = async (e = "all") => {
+          const t = localStorage.getItem("lock-auto-recover");
+          if (t && Date.now() - Number(t) < 3000) {
+            return;
+          }
+          localStorage.setItem("lock-auto-recover", "" + Date.now());
+          await this.getSyncList();
+          if (this.autosSyncList.length === 0) {
+            const e = g.userStore.userInfo["backup-version-v2"];
+            if (g.userStore.userInfo["auto-backup"] && !e) {
+              const e = g.userStore.userInfo.email ? "basic" : "pro";
+              await this.getV1RemoteData(e);
+            } else {
+              this.tiggerBackup();
+            }
+            return;
+          }
+          const i = this.autosSyncList[0];
+          if ((i == null ? undefined : i.id) === this.syncId || this.waitMergeId === (i == null ? undefined : i.id)) {
+            return;
+          }
+          const n = localStorage.getItem("pre-sync-id");
+          if (!n || (i == null ? undefined : i.id) !== n) {
+            await this.getDetail(i.id, "auto", e, false, true);
+            localStorage.removeItem("lock-auto-recover");
+          }
+        };
+        this.changeSyncStatus = e => {
+          this.master = false;
+          this.downloading = e.downloading;
+          this.backuping = e.backuping;
+          this.isBackup = e.isBackup;
+          this.syncFail = e.syncFail;
+          this.syncFailMsg = e.syncFailMsg;
+          this.syncSucsess = e.syncSucsess;
+          if (this.syncSucsess || this.syncFail) {
+            this.syncEnd();
+          }
+        };
+      }
+      get autoSyncing() {
+        return this.downloading || this.backuping;
+      }
+      async changeSyncSwitch(e) {
+        this.isOpenSync = e;
+      }
+      async autoBackup(e, t = "") {
+        const i = await this.toSync(true, e, t);
+        if (!i.error) {
+          Object(a.i)(() => {
+            this.autosSyncList = i.data;
+          });
+        }
+        return i;
+      }
+      async manualBackup() {
+        const {
+          default: e
+        } = await Promise.resolve().then(i.bind(null, 395));
+        const t = e.loading(i18n("backing_up"));
+        const {
+          error: n,
+          data: s
+        } = await this.toSync();
+        t();
+        if (n) {
+          e.error(i18n("backup_failed"));
+        } else {
+          Object(a.i)(() => {
+            this.manualSyncList = s;
+          });
+        }
+      }
+      async toSync(e = false, t = {}, i = "") {
+        let c;
+        this.master = true;
+        if (e) {
+          this.isBackup = true;
+          this.backuping = true;
+          c = await o.d.autoBackup(t, i);
+        } else {
+          const e = {};
+          await s.a.all(C.map(async t => {
+            const i = await t.getBackupData();
+            e[t.backupFileKey] = i;
+          }));
+          c = await o.d.manualBackup(e);
+        }
+        const {
+          error: r,
+          data: l = []
+        } = c;
+        if (e) {
+          if (!r) {
+            k.slave.postTask("slave:sync-to-server", i);
+          }
+          if (r) {
+            this.backupEnd(r.message || "auto-backup error", l[0]?.id);
+          } else {
+            this.backupEnd(null, l[0]?.id);
+          }
+        }
+        return c;
+      }
+      backupEnd(e, t = "") {
+        Object(a.i)(() => {
+          this.master = true;
+          this.backuping = false;
+          if (e) {
+            this.syncFail = true;
+          } else {
+            this.syncSucsess = true;
+            if (t) {
+              this.syncId = t;
+              this.lastSyncTime = Date.now();
+            }
+          }
+        });
+        this.syncEnd();
+      }
+      downloadEnd(e, t = "") {
+        Object(a.i)(() => {
+          this.master = true;
+          this.downloading = false;
+          this.backuping = false;
+          if (e) {
+            this.syncFail = true;
+          } else {
+            this.syncSucsess = true;
+            if (t) {
+              this.syncId = t;
+              this.lastSyncTime = Date.now();
+            }
+          }
+        });
+        this.syncEnd();
+      }
+      syncEnd() {
+        clearTimeout(this.timmer);
+        this.timmer = setTimeout(() => {
+          Object(a.i)(() => {
+            this.syncFail = false;
+            this.syncFailMsg = "";
+            this.syncSucsess = false;
+            this.isBackup = false;
+          });
+        }, 3000);
+      }
+      async getSyncList() {
+        const {
+          data: e,
+          error: t
+        } = await o.d.getSyncList();
+        if (t) {
+          throw t;
+        }
+        Object(a.i)(() => {
+          this.autosSyncList = e.auto;
+          this.manualSyncList = e.manual;
+        });
+      }
+      async getDetail(e, t, n = "all", s = false, a = false) {
+        let c;
+        let r;
+        this.master = true;
+        if (s) {
+          const {
+            default: e
+          } = await Promise.resolve().then(i.bind(null, 395));
+          c = e;
+          r = c.loading(i18n("syncing"));
+        } else {
+          this.downloading = true;
+          this.isBackup = false;
+        }
+        const {
+          data: l,
+          error: d
+        } = await o.d.getSyncDetail(a ? "latest" : e, t, n);
+        if (s) {
+          if (r != null) {
+            r();
+          }
+        }
+        if (d) {
+          if (s) {
+            if (c != null) {
+              c.error(i18n("sync_fail"));
+            }
+          } else {
+            this.downloadEnd(d.message || "download error");
+          }
+        } else {
+          await this.useRemote(l, s);
+          this.downloadEnd(null, e);
+          this.tiggerBackup();
+        }
+      }
+      tiggerBackup() {
+        this.changeRecoveredStatus(true);
+        if (this.autoBackupPipe.websocketKeys?.length) {
+          this.autoBackupPipe.timestamp = Date.now();
+        }
+      }
+      async getV1RemoteData(e, t = false) {
+        let n;
+        let s;
+        this.master = true;
+        if (t) {
+          const {
+            default: e
+          } = await Promise.resolve().then(i.bind(null, 395));
+          n = e;
+          s = n.loading(i18n("syncing"));
+        } else {
+          this.downloading = true;
+          this.isBackup = false;
+        }
+        const {
+          error: c,
+          data: r
+        } = await o.d.getV2DataFromV1(e);
+        if (t) {
+          if (s != null) {
+            s();
+          }
+        }
+        if (c) {
+          if (t) {
+            if (n != null) {
+              n.error(i18n("sync_fail"));
+            }
+          } else {
+            this.downloadEnd(c.message || "download v1 error");
+          }
+          Object(a.i)(() => {
+            this.recoverErrorTimes += 1;
+          });
+        } else {
+          this.downloadEnd(null);
+          await this.useRemote(r, t, true);
+          this.tiggerBackup();
+        }
+      }
+      changeRecoveredStatus(e) {
+        this.isRecovered = e;
+      }
+      autoRunGetAutoLatest() {
+        setTimeout(() => {
+          this.getAutoLatest();
+        }, 0);
+      }
+      showModalAndCheckType(e = false) {
+        return new s.a((t, i) => {
+          if (e) {
+            v.hide();
+          }
+          if (v.instance?.show) {
+            t(null);
+            return;
+          }
+          const o = Object(a.j)(this.waitMergeData);
+          v.create(async n => {
+            this.mergeType = n;
+            this.diffColorItems();
+            try {
+              localStorage.setItem("restoring", "1");
+              await s.a.all(C.map(async e => {
+                if (o && o[e.backupFileKey]) {
+                  if (n === 1) {
+                    e.restartAutoBackupReaction(true);
+                  } else if (n === 2) {
+                    try {
+                      await e.mergeRemote(o[e.backupFileKey], true);
+                      if (e.backupFileKey === "site") {
+                        r.a.setRedirectVersion("");
+                      }
+                    } catch (e) {}
+                  } else {
+                    if (n !== 0) {
+                      throw new Error("not check");
+                    }
+                    try {
+                      await e.mergeRemote(o[e.backupFileKey], false);
+                      if (e.backupFileKey === "site") {
+                        r.a.setRedirectVersion("");
+                      }
+                    } catch (e) {}
+                    e.restartAutoBackupReaction(true);
+                  }
+                }
+              }));
+              this.downloadEnd(null, this.waitMergeId);
+              this.tiggerBackup();
+              Object(a.i)(() => {
+                this.waitMergeData = null;
+                this.waitMergeId = null;
+              });
+            } catch (t) {
+              if (e) {
+                i(t);
+              }
+            }
+            localStorage.removeItem("restoring");
+            t(null);
+          });
+        });
+      }
+      useLocalData(e) {
+        C.map(async t => {
+          if (e == null ? undefined : e[t.backupFileKey]) {
+            try {
+              await t.mergeRemote(e[t.backupFileKey], true);
+            } catch (e) {
+              console.error("Store ~ syncStores.map ~ error", e);
+            }
+          }
+        });
+      }
+      async useLocalDataWithCheck(e) {
+        if (C.some(t => {
+          if (e && e[t.backupFileKey]) {
+            console.log("diffData ~ st.backupFileKey", t.backupFileKey);
+            return t.diffRemote(e[t.backupFileKey]);
+          }
+          return false;
+        })) {
+          await this.showModalAndCheckImportType(e);
+        } else {
+          this.useLocalData(e);
+        }
+      }
+      showModalAndCheckImportType(e) {
+        return new s.a(t => {
+          j.create(async i => {
+            try {
+              await s.a.all(C.map(async t => {
+                if (e && e[t.backupFileKey]) {
+                  if (i === 1) {
+                    try {
+                      await t.mergeRemote(e[t.backupFileKey], true);
+                      if (t.backupFileKey === "site") {
+                        r.a.setRedirectVersion("");
+                      }
+                    } catch (e) {}
+                  } else {
+                    if (i !== 0) {
+                      throw new Error("not check");
+                    }
+                    try {
+                      await t.mergeRemote(e[t.backupFileKey], false);
+                      if (t.backupFileKey === "site") {
+                        r.a.setRedirectVersion("");
+                      }
+                    } catch (e) {}
+                  }
+                }
+              }));
+            } catch (e) {
+              console.log("ModalImportType.create ~ error", e);
+            }
+            t(null);
+          });
+        });
+      }
+      useRemote(e, t, i = false) {
+        return new s.a(async n => {
+          Object(a.i)(() => {
+            this.waitMergeData = null;
+            this.waitMergeId = null;
+          });
+          if (t) {
+            await s.a.all(C.map(async t => {
+              if (e == null ? undefined : e[t.backupFileKey]) {
+                try {
+                  await t.mergeRemote(e[t.backupFileKey], true);
+                  if (t.backupFileKey === "site") {
+                    r.a.setRedirectVersion("");
+                  }
+                } catch (e) {}
+              }
+            }));
+            this.mergeType = 2;
+            this.diffColorItems();
+            n(null);
+          } else if (this.isRecovered) {
+            await s.a.all(C.map(async t => {
+              if (e == null ? undefined : e[t.backupFileKey]) {
+                if (i) {
+                  try {
+                    await t.mergeRemote(e[t.backupFileKey], true);
+                  } catch (e) {}
+                } else {
+                  t.stopAutoBackupReaction();
+                  try {
+                    await t.mergeRemote(e[t.backupFileKey], true);
+                  } catch (e) {}
+                  t.restartAutoBackupReaction();
+                }
+              }
+            }));
+            n(null);
+          } else if (C.some(t => {
+            if (e && e[t.backupFileKey]) {
+              console.log("diffData ~ st.backupFileKey", t.backupFileKey);
+              return t.diffRemote(e[t.backupFileKey]);
+            }
+            return false;
+          })) {
+            Object(a.i)(() => {
+              this.waitMergeData = e;
+              this.waitMergeId = this.autosSyncList[0]?.id;
+            });
+            await this.showModalAndCheckType(true);
+            n(null);
+          } else {
+            this.mergeType = 2;
+            this.diffColorItems();
+            await s.a.all(C.map(async t => {
+              if (e == null ? undefined : e[t.backupFileKey]) {
+                try {
+                  await t.mergeRemote(e[t.backupFileKey], true);
+                } catch (e) {}
+              }
+            }));
+            n(null);
+          }
+        });
+      }
+      pushAutoBackupPipe(e) {
+        if (g.userStore.isLogin && this.isOpenSync) {
+          Object.keys(e).forEach(t => {
+            this.autoBackupPipe.data[t] = e[t];
+            if (!this.autoBackupPipe.websocketKeys.includes(t)) {
+              this.autoBackupPipe.websocketKeys.push(t);
+            }
+          });
+          this.autoBackupPipe.timestamp = Date.now();
+        }
+      }
+      cleanupPipe(e) {
+        if (e === this.autoBackupPipe.timestamp) {
+          this.autoBackupPipe = {
+            data: {},
+            websocketKeys: [],
+            timestamp: 0
+          };
+        }
+      }
+      clearList() {
+        this.autosSyncList = [];
+        this.manualSyncList = [];
+      }
+      async diffColorItems() {
+        await g.userStore.userProfilePromise;
+        const e = g.userStore.userInfo["wp-color-update"];
+        if (e === g.userStore.wpColorUpdate) {
+          return;
+        }
+        const {
+          mergeType: t
+        } = this;
+        const i = await Object(I.c)();
+        const n = Object(a.j)(u.a.customColorItems);
+        await u.a.mergeCustomColor(n, i, Number(t), true);
+        g.userStore.setWpColorUpdate(e);
+      }
+    }
+    x([a.g], R.prototype, "downloading", undefined);
+    x([a.g], R.prototype, "backuping", undefined);
+    x([a.g], R.prototype, "isBackup", undefined);
+    x([a.g], R.prototype, "isOpenSync", undefined);
+    x([a.g], R.prototype, "syncId", undefined);
+    x([a.g], R.prototype, "lastSyncTime", undefined);
+    x([a.g], R.prototype, "syncSucsess", undefined);
+    x([a.g], R.prototype, "syncFail", undefined);
+    x([a.g], R.prototype, "syncFailMsg", undefined);
+    x([a.g], R.prototype, "autosSyncList", undefined);
+    x([a.g], R.prototype, "waitMergeData", undefined);
+    x([a.g], R.prototype, "waitMergeId", undefined);
+    x([a.g], R.prototype, "manualSyncList", undefined);
+    x([a.g], R.prototype, "isRecovered", undefined);
+    x([a.g], R.prototype, "recoverErrorTimes", undefined);
+    x([a.g], R.prototype, "master", undefined);
+    x([a.g], R.prototype, "prerender", undefined);
+    x([a.g], R.prototype, "autoBackupPipe", undefined);
+    x([a.e], R.prototype, "autoSyncing", null);
+    x([a.b], R.prototype, "changeSyncSwitch", null);
+    x([a.b], R.prototype, "autoBackup", null);
+    x([a.b], R.prototype, "manualBackup", null);
+    x([a.b], R.prototype, "toSync", null);
+    x([a.b], R.prototype, "backupEnd", null);
+    x([a.b], R.prototype, "downloadEnd", null);
+    x([a.b], R.prototype, "syncEnd", null);
+    x([a.b], R.prototype, "getSyncList", null);
+    x([a.b], R.prototype, "getDetail", null);
+    x([a.b], R.prototype, "tiggerBackup", null);
+    x([a.b], R.prototype, "getV1RemoteData", null);
+    x([a.b], R.prototype, "changeRecoveredStatus", null);
+    x([a.b], R.prototype, "getAutoLatest", undefined);
+    x([a.b], R.prototype, "pushAutoBackupPipe", null);
+    x([a.b], R.prototype, "cleanupPipe", null);
+    x([a.b], R.prototype, "clearList", null);
+    x([a.b], R.prototype, "changeSyncStatus", undefined);
+    const E = new R();
+    E.initSyncStore(S.j, ["autoBackupPipe", "syncId", "lastSyncTime", "isOpenSync", "isRecovered", "recoverErrorTimes", "prerender", "waitMergeData", "waitMergeId", "manualSyncList", "autosSyncList"], undefined, 50);
+    Object(a.c)(() => {
+      if (E.firstSync) {
+        const {
+          isOpenSync: t,
+          isRecovered: i,
+          downloading: n
+        } = E;
+        if (g.userStore.isLogin && t && i && !n && !v.instance?.show) {
+          const {
+            data: e,
+            websocketKeys: t,
+            timestamp: i
+          } = E.autoBackupPipe;
+          (async e => {
+            const {
+              data: t,
+              websocketKeys: i,
+              timestamp: n
+            } = e;
+            const o = Object.assign({}, t);
+            if (Object.keys(o).length) {
+              try {
+                const e = localStorage.getItem("lock-auto-backup");
+                if (e && Date.now() - Number(e) < 4000) {
+                  return;
+                }
+                localStorage.setItem("lock-auto-backup", "" + Date.now());
+                if (E.autosSyncList.length === 0) {
+                  await s.a.all(C.map(async e => {
+                    const t = await e.getBackupData();
+                    o[e.backupFileKey] = t;
+                  }));
+                } else {
+                  await s.a.all(C.map(async e => {
+                    if (i.includes(e.backupFileKey)) {
+                      const t = await e.getBackupData();
+                      o[e.backupFileKey] = t;
+                    }
+                  }));
+                }
+                const {
+                  error: t
+                } = await E.autoBackup(Object(a.j)(o), i.join(","));
+                if (t) {
+                  return;
+                }
+                E.cleanupPipe(n);
+                localStorage.removeItem("lock-auto-backup");
+              } catch (e) {}
+            }
+          })({
+            data: e,
+            websocketKeys: t,
+            timestamp: i
+          });
+        }
+      }
+    }, {
+      delay: 4000
+    });
+    Object(a.c)(() => {
+      if (E.firstSync) {
+        const e = E.isOpenSync && g.userStore.isLogin;
+        k.slave.postTask("slave:change-sync", {
+          status: e,
+          userInfo: {
+            uid: g.userStore.userInfo.uid,
+            secret: g.userStore.userInfo.secret
+          }
+        });
+        if (e) {
+          E.autoRunGetAutoLatest();
+        } else if (g.userStore.isLogin && E.autosSyncList.length === 0 && E.manualSyncList.length === 0) {
+          E.getSyncList();
+        } else if (!g.userStore.isLogin) {
+          E.clearList();
+        }
+      }
+    }, {
+      delay: 100
+    });
+    Object(a.c)(() => {
+      if (E.firstSync) {
+        if (!E.isOpenSync || !g.userStore.isLogin) {
+          E.changeRecoveredStatus(false);
+          Object(a.i)(() => {
+            E.syncId = "";
+            E.waitMergeId = null;
+            E.waitMergeData = null;
+          });
+          localStorage.removeItem("pre-sync-id");
+        }
+      }
+    });
+    Object(a.c)(() => {
+      if (E.firstSync && g.userStore.isLogin && g.userStore.userInfo["auto-backup"] === 0 && E.autosSyncList.length === 0) {
+        r.a.restartAutoBackupReaction(true);
+      }
+    });
+    Object(a.c)(() => {
+      if (E.firstSync && E.master) {
+        const e = {
+          downloading: E.downloading,
+          backuping: E.backuping,
+          syncSucsess: E.syncSucsess,
+          syncFail: E.syncFail,
+          syncFailMsg: E.syncFailMsg,
+          isBackup: E.isBackup
+        };
+        k.slave.sendMessage("tabs-sync-status", e);
+      }
+    }, {
+      delay: 20
+    });
+    Object(a.c)(() => {
+      if (E.firstSync && E.autosSyncList.length) {
+        if (E.waitMergeId === E.autosSyncList[0]?.id) {
+          E.showModalAndCheckType();
+        } else {
+          v.hide();
+        }
+      }
+    }, {
+      delay: 1
+    });
+    window.addEventListener("beforeunload", () => {
+      if (E.master) {
+        k.slave.sendMessage("tabs-sync-status", {
+          downloading: false,
+          backuping: false,
+          syncSucsess: false,
+          syncFail: false,
+          syncFailMsg: "",
+          isBackup: false
+        });
+      }
+    });
+    Object(a.h)(() => E.firstSync, async e => {}, {
+      delay: 1000
+    });
+    _.a.sendPageView({
+      page: "newtab"
+    });
+  },
+  609: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return _;
+    });
+    i(19);
+    i(64);
+    i(7);
+    var n = i(2);
+    var s = i(36);
+    var a = i(309);
+    var o = i(106);
+    var c = i(0);
+    var r = i(13);
+    var l = i(161);
+    var d = i(254);
+    var u = i(384);
+    function p() {
+      l.slave.postTask("slave:bg-run-clear-wallpaper-timer-task");
+    }
+    var h = i(164);
+    var g = i(429);
+    var b = i(165);
+    var y = i(623);
+    var m = i.n(y);
+    var f = i(24);
+    var w = i(620);
+    var v = i(395);
+    var O = i(624);
+    function j(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    const k = i(474);
+    class I extends a.a {
+      constructor() {
+        super();
+        this.url = k;
+        this.urlInUI = k;
+        this.rawUrl = k;
+        this.setWpSouceCount = e => this.wpSourceCount = e;
+        this.type = "default";
+        this.switchType = "disabled";
+        this.setSwitchType = e => {
+          this.switchType = e;
+          this._updateTimer(true);
+        };
+        this.setWpSourceCount = e => this.wpSourceCount = e;
+        this.wpExt = "png";
+        this.list = [];
+        this.index = -1;
+        this.timeEnd = 0;
+        this.remoteData = [];
+        this.opacity = 40;
+        this.blur = 0;
+        this.setOpacity = e => this.opacity = e;
+        this.setBlur = e => this.blur = e;
+        this.liked = [];
+        this.setLiked = e => {
+          this.liked = e;
+        };
+        this.customColorItems = [];
+        this.setCustomColorItems = e => this.customColorItems = e;
+        this._rgbaToHex = e => {
+          const t = e.replace(/rgba?\(/, "").replace(/\)/, "").replace(/[\s+]/g, "").split(",");
+          const i = parseFloat(t[3] || "1");
+          const n = Math.floor(i * parseInt(t[0]) + (1 - i) * 255);
+          const s = Math.floor(i * parseInt(t[1]) + (1 - i) * 255);
+          const a = Math.floor(i * parseInt(t[2]) + (1 - i) * 255);
+          return ("0" + n.toString(16)).slice(-2) + ("0" + s.toString(16)).slice(-2) + ("0" + a.toString(16)).slice(-2);
+        };
+        this._maxCollectionlen = 100;
+        this.cloudCollection = [];
+        this.appendCloudCollection = e => this.cloudCollection.push(e);
+        this.setCloudCollection = e => this.cloudCollection = e;
+        this._maxRecentUsedLen = 100;
+        this.cloudRecentUsedOrder = {};
+        this.setCloudRecentUsedOrder = e => {
+          const {
+            cloudRecentUsedOrder: t,
+            cloudRecentUsed: i
+          } = this;
+          const n = {};
+          Object.keys(t).forEach(e => {
+            if (i.includes(e)) {
+              n[e] = t[e];
+            }
+          });
+          n[e] = Date.now();
+          this.cloudRecentUsedOrder = n;
+        };
+        this.cloudRecentUsed = [];
+        this.setCloudRecentUsed = e => {
+          const t = Object.keys(this.cloudRecentUsedOrder);
+          e.forEach(e => {
+            const i = t.indexOf(e);
+            if (i !== -1) {
+              t.splice(i, 1);
+            }
+          });
+          if (t.length > 0) {
+            t.forEach(e => {
+              delete this.localRecentUsedOrder[e];
+            });
+          }
+          this.cloudRecentUsed = e;
+        };
+        this.appendCloudRecentUsed = e => {
+          this.cloudRecentUsed.push(e);
+          this.cloudRecentUsed = Array.from(new Set(this.cloudRecentUsed));
+        };
+        this.localRecentUsedOrder = {};
+        this.setLocalRecentUsedOrder = e => {
+          this.localRecentUsedOrder[e] = Date.now();
+        };
+        this.localRecentUsed = [];
+        this.setLocalRecentUsed = e => {
+          const t = Object.keys(this.localRecentUsedOrder);
+          e.forEach(e => {
+            const i = t.indexOf(e);
+            if (i !== -1) {
+              t.splice(i, 1);
+            }
+          });
+          if (t.length > 0) {
+            t.forEach(e => {
+              delete this.localRecentUsedOrder[e];
+            });
+          }
+          this.localRecentUsed = e;
+        };
+        this.appendLocalRecentUsed = e => {
+          this.localRecentUsed.push(e);
+          this.localRecentUsed = Array.from(new Set(this.localRecentUsed));
+        };
+        this.isLibraryItem = e => e.includes(window.__INFINITY__.wpLibraryItemId);
+        this.isLocal = e => e.includes(window.__INFINITY__.wpId);
+        this.isColorItem = e => e.includes(window.__INFINITY__.wpColorId);
+        this.isCurrentWp = e => this.id === e;
+        this.diffRemote = e => {
+          const t = ["type", "switchType", "timeEnd", "id", "wpSource", "opacity", "blur", "customColorItems"];
+          const i = Object.keys(e).every(i => !t.includes(i) || n.d.structural(this[i], e[i]));
+          let s = false;
+          if (e.type !== "local" && e.url) {
+            s = this.urlInUI !== e.url;
+          }
+          return !i || s;
+        };
+        this.nextPage = 0;
+        this.totalPage = -1;
+        this.delay = -1;
+        this._whenLocalSynced = async () => {
+          (function (e) {
+            Object(n.c)(() => {
+              const {
+                opacity: t,
+                blur: i
+              } = e;
+              const n = {
+                "--wallpaper-alpha": t / 100,
+                "--wallpaper-filter": i / 5 + "px"
+              };
+              Object.keys(n).forEach(e => {
+                document.body.style.setProperty(e, n[e]);
+              });
+            });
+            Object(n.h)(() => e.type, t => {
+              if (!t.includes("Auto")) {
+                if (t !== "bing") {
+                  e.wpSource &&= undefined;
+                } else {
+                  e.wpSource = t;
+                }
+                e.switchType = "disabled";
+                p();
+              }
+            });
+            Object(n.c)(() => {
+              const {
+                id: t
+              } = e;
+              if (t) {
+                e.addRecentUsedP(t);
+              }
+            });
+            const t = document.querySelector(".wallpaper");
+            Object(n.h)(() => [e.urlInUI, e.color], ([i, n]) => {
+              if (e.type !== "color") {
+                if (t.style.backgroundColor) {
+                  Object(d.a)("#999");
+                  setTimeout(() => {
+                    Object(d.b)(i);
+                  }, 200);
+                } else {
+                  Object(d.b)(i);
+                }
+              } else {
+                Object(d.a)(n);
+              }
+            });
+          })(this);
+          await O.a.initStore();
+          if (this.isAuto) {
+            this._setCloudAutoAfterInit();
+          }
+          switch (this.type) {
+            case "bing":
+              this._setBingAfterInit();
+              break;
+            case "userLibraryAuto":
+              this._checkLibraryExists();
+          }
+        };
+        this._syncLock = false;
+        this.mergeRemote = async (e, t) => {
+          try {
+            if (this._syncLock) {
+              return;
+            }
+            this._syncLock = true;
+            if (!("type" in e)) {
+              return;
+            }
+            if (c.n) {
+              delete e.blur;
+            }
+            if ("cloudRecentUsed" in e) {
+              if (t) {
+                this.setCloudRecentUsed(e.cloudRecentUsed);
+              } else {
+                const t = Array.from(new Set(e.cloudRecentUsed.concat(this.cloudRecentUsed)));
+                this.setCloudRecentUsed(t);
+              }
+              delete e.cloudRecentUsed;
+            }
+            if ("customColorItems" in e) {
+              this.mergeCustomColor(this.customColorItems, e.customColorItems, t ? 2 : 0);
+              delete e.customColorItems;
+            }
+            if (e.type === "local") {
+              await this._mergeLocal(e);
+              return;
+            }
+            e.urlInUI = e.url;
+            this._merge(e);
+            this._afterSynced();
+          } catch (e) {
+            console.log(e);
+          } finally {
+            this._syncLock = false;
+          }
+        };
+        this.windmillRotating = false;
+        this._windmillPrevRotateSpeed = 0;
+        this._windmillPrevRotateDegree = 0;
+        this._windmillPrevRotateTime = -1;
+        this.performWindmillRotate = e => {
+          if (this._windmillPrevRotateTime === -1) {
+            this._windmillPrevRotateTime = e;
+            requestAnimationFrame(this.performWindmillRotate);
+            return;
+          }
+          const t = e - this._windmillPrevRotateTime;
+          let i = this._windmillPrevRotateDegree;
+          const {
+            _windmillPrevRotateSpeed: n
+          } = this;
+          let s = n;
+          let a = 0;
+          if (this.windmillRotating) {
+            if (n < 0.46) {
+              let e;
+              let i;
+              s += t * 0.00036;
+              if (s > 0.46) {
+                i = (s - 0.46) / 0.00036;
+                e = t - i;
+                s = 0.46;
+              } else {
+                e = t;
+                i = 0;
+              }
+              a = i * 0.46 + n * e + e * 0.00018 * e;
+            } else {
+              a = t * 0.46;
+            }
+          } else {
+            let i;
+            s -= t * 0.00036;
+            if (s < 0) {
+              i = n / 0.00036;
+              s = 0;
+            } else {
+              i = t;
+            }
+            if (s === 0) {
+              e = -1;
+            }
+            a = n * i - i * 0.00018 * i;
+          }
+          i -= a;
+          i %= 360;
+          if (i < 0) {
+            i = 360 + i;
+          }
+          if (this.windmillParent) {
+            this.windmillParent.rotateWindMill(i);
+          }
+          this._windmillPrevRotateDegree = i;
+          this._windmillPrevRotateTime = e;
+          this._windmillPrevRotateSpeed = s;
+          if (s !== 0) {
+            requestAnimationFrame(this.performWindmillRotate);
+          }
+        };
+        this._lockLoadRandomP = false;
+        this.needSwitchWallpaper = false;
+        this._afterWpAutoSwitched = () => {
+          this._updateTimer(true);
+          if (!O.a.onlyOneItem) {
+            return this._prepareNextWp();
+          }
+        };
+        this._lockSwitchWallpaper = false;
+        this.timeToSwitchWallpaper = async () => {
+          if (!O.a.onlyOneItem && !this._lockSwitchWallpaper) {
+            this._lockSwitchWallpaper = true;
+            try {
+              await this.switchWallpaper();
+              await this._afterWpAutoSwitched();
+            } finally {
+              this._lockSwitchWallpaper = false;
+            }
+          }
+        };
+        this.switchToNextWallpaper = async () => {
+          try {
+            await this.timeToSwitchWallpaper();
+          } catch (e) {
+            o.message.top(i18n("wallpaper_switch_failure"));
+          }
+        };
+        this.initAutoBackup("wallpaper", ["id", "url", "rawUrl", "wpSource", "wpSourceName", "type", "switchType", "color", "timeEnd", "index", "opacity", "blur", "cloudRecentUsed", "cloudRecentUsedOrder", "customColorItems", "nextPage", "totalPage", "wpExt"]);
+        (function (e) {
+          return e.initSyncStore(r.n, ["id", "urlInUI", "rawUrl", "wpSource", "wpSourceCount", "wpSourceName", "type", "switchType", "imageName", "imageSource", "imageType", "color", "index", "timeEnd", "remoteData", "opacity", "blur", "cloudRecentUsed", "localRecentUsed", "cloudRecentUsedOrder", "localRecentUsedOrder", "nextPage", "totalPage", "wpExt", "customColorItems", "delay"], undefined);
+        })(this).then(this._whenLocalSynced);
+        setTimeout(() => {
+          this.windmillParent = document.querySelector("newtab-main");
+        });
+      }
+      _updateTimer(e = false) {
+        const {
+          switchType: t
+        } = this;
+        if (["disabled", "when-newtab"].includes(t)) {
+          p();
+          this.setTimeEnd(0);
+        } else {
+          if (e) {
+            const e = Date.now();
+            this.setTimeEnd(e + Object(u.a)(t));
+          }
+          (function (e, t) {
+            const i = Date.now();
+            const n = Object(u.a)(t);
+            const s = e.timeEnd;
+            let a;
+            if (s > i) {
+              a = s - i;
+            } else {
+              a = n;
+              e.setTimeEnd(i + n);
+            }
+            l.slave.postTask("slave:bg-run-timer-to-switch-wallpaper", a);
+          })(this, t);
+        }
+      }
+      setWpSourceName(e) {
+        this.wpSourceName = e;
+      }
+      setWallpaper(e) {
+        const {
+          url: t,
+          urlInUI: i,
+          rawUrl: n,
+          id: s,
+          name: a,
+          source: o
+        } = e;
+        if (a) {
+          this.imageName = a;
+        }
+        this.id = s;
+        this.url = t;
+        this.urlInUI = i;
+        this.rawUrl = n;
+        this.imageSource = o;
+        this.setBase64Wallpaper();
+      }
+      async setBase64Wallpaper() {
+        const {
+          type: e,
+          url: t
+        } = this;
+        if (["local", "color"].includes(e)) {
+          return;
+        }
+        const i = await Object(u.d)(t);
+        await Object(h.g)(i);
+      }
+      setColor(e) {
+        this.type = "color";
+        this.id = e.id;
+        this.color = e.content;
+        this.urlInUI = undefined;
+      }
+      setCloudWallpaper(e) {
+        this.type = "cloud";
+        this.setCloudWallpaperRaw(e);
+      }
+      setCloudWallpaperRaw(e) {
+        this.setWallpaper({
+          type: e.type,
+          id: e.id,
+          url: e.url,
+          urlInUI: e.url,
+          rawUrl: e.rawUrl,
+          source: e.source
+        });
+      }
+      setAutoWallpaperRaw(e) {
+        this.setWallpaper({
+          type: e.type,
+          id: e.id,
+          url: e.url,
+          urlInUI: e.url,
+          rawUrl: e.rawUrl,
+          source: e.source
+        });
+      }
+      setWpExt(e) {
+        this.wpExt = e;
+      }
+      async setLocalWallpaper(e) {
+        const {
+          file: t
+        } = e;
+        this.setWpExt(m.a.getExtension(t.type));
+        const i = await Object(u.d)(t);
+        await Object(h.g)(i);
+        this.setType("local");
+        this.setWallpaper({
+          type: e.type,
+          url: null,
+          urlInUI: e.url,
+          rawUrl: e.url,
+          id: e.id
+        });
+      }
+      async enableBingWallpaper(e) {
+        this.type = "bing";
+        this.wpSource = "bing";
+        this.setBingWallpaper(e);
+      }
+      setBingWallpaper(e) {
+        this.setCloudWallpaperRaw(e);
+      }
+      setList(e) {
+        this.list = e;
+      }
+      pushList(e) {
+        this.list.push(...e);
+      }
+      setIndex(e) {
+        this.index = e;
+      }
+      setTimeEnd(e) {
+        this.timeEnd = e;
+      }
+      setRemoteData(e) {
+        this.remoteData = e;
+      }
+      pushRemoteData(e) {
+        this.remoteData.push(...e);
+      }
+      spliceRemoteData(e, t = 0) {
+        this.remoteData.splice(t, e);
+      }
+      get isAuto() {
+        return this.type.includes("Auto");
+      }
+      removeLiked(e) {
+        const t = this.liked.indexOf(e);
+        if (t !== -1) {
+          this.liked.splice(t, 1);
+        }
+      }
+      addLiked(e) {
+        const t = Object(n.j)(this.liked);
+        t.push(e);
+        const i = Array.from(new Set(t));
+        this.setLiked(i);
+      }
+      includeLiked(e) {
+        return this.liked.includes(e);
+      }
+      async loadCollectionP() {
+        const e = await Object(b.getCollectionWallpaper)();
+        if (!e.error) {
+          this.setCloudCollection(e.data);
+        }
+      }
+      async loadLikedP() {
+        const e = await Object(b.getLikedWallpaper)();
+        if (!e.error) {
+          this.setLiked(e.data);
+        }
+      }
+      pushCustomColor(e) {
+        this.customColorItems.push(...e);
+      }
+      includesColorItem(e) {
+        return this.customColorItems.findIndex(({
+          content: t
+        }) => e === t) !== -1;
+      }
+      appendCustomColor(e) {
+        if (this.customColorItems.findIndex(({
+          content: t
+        }) => t === e.content) === -1) {
+          const t = Object(n.j)(this.customColorItems);
+          this.setCustomColorItems([e].concat(t));
+        }
+      }
+      removeCustomColor(e) {
+        const t = this.customColorItems.findIndex(({
+          id: t
+        }) => t === e);
+        if (t !== -1) {
+          this.customColorItems.splice(t, 1);
+        }
+      }
+      _rgbToHex(e) {
+        return e.map(e => e.toString(16).padStart(0)).reduce((e, t) => e + t);
+      }
+      async addCustomColorItem(e) {
+        if (this.includesColorItem(e)) {
+          return;
+        }
+        const t = this._rgbaToHex(e);
+        const i = window.__INFINITY__.color_list;
+        const n = i.map(e => f.a.hexColorDelta(t, e));
+        const s = i[n.indexOf(Math.max.apply(null, n))];
+        const a = {
+          id: `${window.__INFINITY__.wpColorId}${Object(w.a)()}`,
+          content: e,
+          similarColor: s
+        };
+        try {
+          if (g.userStore.isLogin) {
+            await Object(b.addCustomColor)(a);
+          }
+          this.appendCustomColor(Object.assign({
+            type: "color"
+          }, a));
+          v.default.success(i18n("add_success"));
+        } catch (e) {
+          v.default.error(i18n("network_error"));
+        }
+      }
+      addCloudCollectionP(e) {
+        if (this.cloudCollection.includes(e)) {
+          return;
+        }
+        this.appendCloudCollection(e);
+        const t = this._maxCollectionlen - this.collectionLen;
+        if (t < 0) {
+          const e = Object(n.j)(this.cloudCollection).reverse();
+          e.length += t;
+          this.setCloudCollection(e.reverse());
+        }
+      }
+      removeCloudCollectionP(e) {
+        const t = this.cloudCollection.indexOf(e);
+        if (t !== -1) {
+          this.cloudCollection.splice(t, 1);
+        }
+      }
+      get collectionLen() {
+        return this.cloudCollection.length;
+      }
+      removeCollectionP(e) {
+        this.removeCloudCollectionP(e);
+      }
+      addCollectionP(e) {
+        this.addCloudCollectionP(e);
+      }
+      includeCollection(e) {
+        return this.cloudCollection.includes(e);
+      }
+      dropCloudRecentUsed(e) {
+        const t = this.cloudRecentUsed.indexOf(e);
+        if (t !== -1) {
+          this.cloudRecentUsed.splice(t, 1);
+        }
+      }
+      get recentUsedLen() {
+        return this.cloudRecentUsed.length + this.localRecentUsed.length;
+      }
+      addLocalRecentP(e) {
+        this.setLocalRecentUsedOrder(e);
+        if (this.localRecentUsed.includes(e)) {
+          return;
+        }
+        this.appendLocalRecentUsed(e);
+        const t = this._maxRecentUsedLen - this.recentUsedLen;
+        if (t < 0) {
+          const e = Object(n.j)(this.localRecentUsed).reverse();
+          e.length += t;
+          this.setLocalRecentUsed(e.reverse());
+        }
+      }
+      addCloudRecentP(e) {
+        this.setCloudRecentUsedOrder(e);
+        if (this.cloudRecentUsed.includes(e)) {
+          return;
+        }
+        this.appendCloudRecentUsed(e);
+        const t = this._maxRecentUsedLen - this.recentUsedLen;
+        if (t < 0) {
+          const e = Object(n.j)(this.cloudRecentUsed).reverse();
+          e.length += t;
+          this.setCloudRecentUsed(e.reverse());
+        }
+      }
+      removeCloudRecentUsedP(e) {
+        const t = Object(n.j)(this.cloudRecentUsed);
+        e.forEach(e => {
+          const i = t.indexOf(e);
+          if (i !== -1) {
+            t.splice(i, 1);
+          }
+        });
+        this.setCloudRecentUsed(t);
+      }
+      addRecentUsedP(e) {
+        this.addCloudRecentP(e);
+      }
+      async getBackupData() {
+        const e = {};
+        this.backupValueKeys.forEach(t => {
+          e[t] = Object(n.j)(this[t]);
+        });
+        try {
+          if (this.type === "local") {
+            const t = await Object(h.c)();
+            e.url = t;
+          } else {
+            e.url = this.urlInUI;
+          }
+        } catch (t) {
+          e.type = "default";
+        }
+        return e;
+      }
+      async _setBingAfterInit() {
+        const e = await Object(u.b)();
+        if (this.id !== e.id) {
+          this.setCloudWallpaperRaw(e);
+        }
+      }
+      setDefaultWallpaper() {
+        this.id = null;
+        this.type = "default";
+        this.urlInUI = this.url = Object(s.c)();
+        this.rawUrl = s.b;
+      }
+      async _checkLibraryExists() {
+        try {
+          const e = await Object(b.hasWallpaperLibrary)(this.wpSource);
+          if (e.error) {
+            throw e.error;
+          }
+          if (e.data !== 1) {
+            this.setDefaultWallpaper();
+          }
+        } catch (e) {}
+      }
+      _setCloudAutoAfterInit() {
+        if (O.a.ready) {
+          this._updateTimer(true);
+        } else {
+          this._afterWpAutoSwitched();
+        }
+      }
+      setType(e) {
+        this.type = e;
+      }
+      _merge(e) {
+        Object.keys(e).forEach(t => {
+          if (this[t] !== e[t]) {
+            this[t] = e[t];
+          }
+        });
+      }
+      async _mergeLocal(e) {
+        if (this.type === "local" && this.urlInUI.startsWith("blob:")) {
+          if ((await Object(h.c)()) !== e.url) {
+            const t = await Object(h.a)(e.url);
+            e.urlInUI = e.rawUrl = window.URL.createObjectURL(t);
+            await Object(h.g)(e.url);
+          } else {
+            delete e.urlInUI;
+            delete e.rawUrl;
+          }
+        } else {
+          const t = await Object(h.a)(e.url);
+          e.urlInUI = e.rawUrl = window.URL.createObjectURL(t);
+          await Object(h.g)(e.url);
+        }
+        delete e.url;
+        const t = e.wpExt;
+        delete e.wpExt;
+        this._merge(e);
+        if (e.id) {
+          this.setWpExt(t);
+        } else {
+          this.setWpExt("");
+        }
+        this._afterSynced();
+      }
+      async mergeCustomColor(e, t, i, n = false) {
+        switch (i) {
+          case 1:
+            if (e.length === 0) {
+              return;
+            }
+            await Object(b.setCustomColorItems)(e.map(e => {
+              delete e.type;
+              return e;
+            }));
+            break;
+          case 2:
+            _.setCustomColorItems(t.map(e => {
+              e.type = "color";
+              return e;
+            }));
+            break;
+          case 0:
+            {
+              const i = [];
+              const s = [];
+              for (let t = 0, n = e.length; t < n; ++t) {
+                const n = e[t];
+                if (!s.includes(n.id)) {
+                  i.push(n);
+                  s.push(n.id);
+                }
+              }
+              for (let e = 0, n = t.length; e < n; ++e) {
+                const n = t[e];
+                if (!s.includes(n.id)) {
+                  i.push(n);
+                  s.push(n.id);
+                }
+              }
+              if (n) {
+                await Object(b.setCustomColorItems)(i.map(e => {
+                  delete e.type;
+                  return e;
+                }));
+              }
+              _.setCustomColorItems(i.map(e => {
+                if (!("type" in e)) {
+                  e.type = "color";
+                }
+                return e;
+              }));
+            }
+        }
+      }
+      _afterSynced() {
+        if (s.f) {
+          Object(n.i)(() => {
+            this.url = this.url.replace(s.g, "");
+            this.urlInUI = this.urlInUI.replace(s.g, "");
+          });
+        }
+        this.setBase64Wallpaper();
+        if (this.isAuto) {
+          this._updateTimer();
+          this._prepareNextWp();
+        }
+      }
+      startRotateWindmill() {
+        this.windmillRotating = true;
+        if (this._windmillPrevRotateSpeed === 0) {
+          requestAnimationFrame(this.performWindmillRotate);
+        }
+      }
+      endRotateWindmill() {
+        this.windmillRotating = false;
+      }
+      async randomWallpaper() {
+        if (!this._lockLoadRandomP) {
+          this._lockLoadRandomP = true;
+          this.startRotateWindmill();
+          try {
+            const {
+              data: e,
+              error: t
+            } = await Object(b.getRandomWallpaper)();
+            if (t) {
+              throw new Error(JSON.stringify(t));
+            }
+            const i = await Object(h.f)(e.url);
+            if (!i) {
+              throw new Error("fetch res to check :" + i);
+            }
+            this.setCloudWallpaper(Object.assign({
+              type: "cloud"
+            }, e));
+            o.message.top(i18n("wallpaper_switch_success"));
+          } catch (e) {
+            o.message.top(i18n("wallpaper_switch_failure"));
+          } finally {
+            this._lockLoadRandomP = false;
+            this.endRotateWindmill();
+          }
+        }
+      }
+      async getNextWp(...e) {
+        const {
+          data: t
+        } = await Object(b.getNextWallpaper)(...e);
+        const [i] = Object(h.b)([t]);
+        return i;
+      }
+      async _prepareNextWp() {
+        try {
+          const e = this.type !== "userLibraryAuto" ? "library" : "userLibrary";
+          const t = await this.getNextWp(this.wpSource, this.id, e);
+          if (t.id === this.id) {
+            O.a.setOnlyOneItem(true);
+          } else {
+            O.a.setOnlyOneItem(false);
+          }
+          await Object(h.f)(t.url);
+          O.a.setNextId(t.id);
+          O.a.setNextRawURL(t.rawUrl);
+          O.a.setNextURL(t.url);
+          O.a.setNextItem(t);
+          O.a.setReady(true);
+        } catch (e) {
+          if (!e.__CANCEL__) {
+            throw e;
+          }
+        }
+      }
+      enableUserLibraryAuto({
+        libraryId: e,
+        libraryName: t
+      }, i, n) {
+        this.type = "userLibraryAuto";
+        this.switchType = i;
+        this.wpSource = e;
+        this.wpSourceName = t;
+        this._afterEnableWpAuto(n);
+      }
+      enableCloudAuto(e, t, i) {
+        this.type = "cloudAuto";
+        this.wpSource = e;
+        this.switchType = t;
+        this._afterEnableWpAuto(i);
+      }
+      _afterEnableWpAuto(e) {
+        this.setAutoWallpaperRaw(e);
+        O.a.setOnlyOneItem(false);
+        this._afterWpAutoSwitched();
+      }
+      async switchWallpaper() {
+        if (!O.a.onlyOneItem && !O.a.ready) {
+          await this._prepareNextWp();
+        }
+        this.setAutoWallpaperRaw(O.a.nextItem);
+        O.a.setReady(false);
+        O.a.clearNextData();
+      }
+    }
+    j([n.g], I.prototype, "id", undefined);
+    j([n.g], I.prototype, "url", undefined);
+    j([n.g], I.prototype, "urlInUI", undefined);
+    j([n.g], I.prototype, "rawUrl", undefined);
+    j([n.g], I.prototype, "wpSource", undefined);
+    j([n.g], I.prototype, "wpSourceCount", undefined);
+    j([n.b], I.prototype, "setWpSouceCount", undefined);
+    j([n.g], I.prototype, "type", undefined);
+    j([n.g], I.prototype, "switchType", undefined);
+    j([n.b], I.prototype, "setSwitchType", undefined);
+    j([n.b], I.prototype, "setWpSourceCount", undefined);
+    j([n.g], I.prototype, "wpSourceName", undefined);
+    j([n.b], I.prototype, "setWpSourceName", null);
+    j([n.g], I.prototype, "imageName", undefined);
+    j([n.g], I.prototype, "imageSource", undefined);
+    j([n.g], I.prototype, "imageType", undefined);
+    j([n.b], I.prototype, "setWallpaper", null);
+    j([n.g], I.prototype, "color", undefined);
+    j([n.b], I.prototype, "setColor", null);
+    j([n.b], I.prototype, "setCloudWallpaper", null);
+    j([n.b], I.prototype, "setCloudWallpaperRaw", null);
+    j([n.b], I.prototype, "setAutoWallpaperRaw", null);
+    j([n.g], I.prototype, "wpExt", undefined);
+    j([n.b], I.prototype, "setWpExt", null);
+    j([n.b], I.prototype, "enableBingWallpaper", null);
+    j([n.b], I.prototype, "setBingWallpaper", null);
+    j([n.g], I.prototype, "list", undefined);
+    j([n.b], I.prototype, "setList", null);
+    j([n.b], I.prototype, "pushList", null);
+    j([n.g], I.prototype, "index", undefined);
+    j([n.b], I.prototype, "setIndex", null);
+    j([n.g], I.prototype, "timeEnd", undefined);
+    j([n.b], I.prototype, "setTimeEnd", null);
+    j([n.g], I.prototype, "remoteData", undefined);
+    j([n.b], I.prototype, "setRemoteData", null);
+    j([n.b], I.prototype, "pushRemoteData", null);
+    j([n.b], I.prototype, "spliceRemoteData", null);
+    j([n.g], I.prototype, "opacity", undefined);
+    j([n.g], I.prototype, "blur", undefined);
+    j([n.b], I.prototype, "setOpacity", undefined);
+    j([n.b], I.prototype, "setBlur", undefined);
+    j([n.e], I.prototype, "isAuto", null);
+    j([n.g], I.prototype, "liked", undefined);
+    j([n.b], I.prototype, "setLiked", undefined);
+    j([n.b], I.prototype, "removeLiked", null);
+    j([n.b], I.prototype, "addLiked", null);
+    j([n.g], I.prototype, "customColorItems", undefined);
+    j([n.b], I.prototype, "setCustomColorItems", undefined);
+    j([n.b], I.prototype, "pushCustomColor", null);
+    j([n.b], I.prototype, "removeCustomColor", null);
+    j([n.b], I.prototype, "addCustomColorItem", null);
+    j([n.g], I.prototype, "cloudCollection", undefined);
+    j([n.b], I.prototype, "appendCloudCollection", undefined);
+    j([n.b], I.prototype, "setCloudCollection", undefined);
+    j([n.b], I.prototype, "addCloudCollectionP", null);
+    j([n.b], I.prototype, "removeCloudCollectionP", null);
+    j([n.e], I.prototype, "collectionLen", null);
+    j([n.g], I.prototype, "cloudRecentUsed", undefined);
+    j([n.b], I.prototype, "dropCloudRecentUsed", null);
+    j([n.b], I.prototype, "setCloudRecentUsed", undefined);
+    j([n.b], I.prototype, "appendCloudRecentUsed", undefined);
+    j([n.g], I.prototype, "localRecentUsed", undefined);
+    j([n.b], I.prototype, "setLocalRecentUsed", undefined);
+    j([n.b], I.prototype, "appendLocalRecentUsed", undefined);
+    j([n.e], I.prototype, "recentUsedLen", null);
+    j([n.b], I.prototype, "addLocalRecentP", null);
+    j([n.b], I.prototype, "addCloudRecentP", null);
+    j([n.b], I.prototype, "removeCloudRecentUsedP", null);
+    j([n.g], I.prototype, "delay", undefined);
+    j([n.b], I.prototype, "setDefaultWallpaper", null);
+    j([n.b], I.prototype, "_setCloudAutoAfterInit", null);
+    j([n.b], I.prototype, "setType", null);
+    j([n.b], I.prototype, "_merge", null);
+    j([n.b], I.prototype, "mergeRemote", undefined);
+    j([n.b], I.prototype, "randomWallpaper", null);
+    j([n.b], I.prototype, "enableUserLibraryAuto", null);
+    j([n.b], I.prototype, "enableCloudAuto", null);
+    j([n.b], I.prototype, "switchWallpaper", null);
+    const _ = new I();
+  },
+  610: function (e, t, i) {
+    "use strict";
+
+    i.r(t);
+    i.d(t, "weatherStore", function () {
+      return f;
+    });
+    i.d(t, "getCurrentWeather", function () {
+      return w;
+    });
+    var n = i(5);
+    var s = i.n(n);
+    i(7);
+    var a = i(2);
+    var o = i(22);
+    var c = i(24);
+    var r = i(309);
+    var l = i(0);
+    const d = {
+      100: i18n("w_100"),
+      101: i18n("w_101"),
+      102: i18n("w_102"),
+      103: i18n("w_103"),
+      104: i18n("w_104"),
+      200: i18n("w_200"),
+      201: i18n("w_201"),
+      202: i18n("w_202"),
+      203: i18n("w_203"),
+      204: i18n("w_204"),
+      205: i18n("w_205"),
+      206: i18n("w_206"),
+      207: i18n("w_207"),
+      208: i18n("w_208"),
+      209: i18n("w_209"),
+      210: i18n("w_210"),
+      211: i18n("w_211"),
+      212: i18n("w_212"),
+      213: i18n("w_213"),
+      300: i18n("w_300"),
+      301: i18n("w_301"),
+      302: i18n("w_302"),
+      303: i18n("w_303"),
+      304: i18n("w_304"),
+      305: i18n("w_305"),
+      306: i18n("w_306"),
+      307: i18n("w_307"),
+      308: i18n("w_308"),
+      309: i18n("w309"),
+      310: i18n("w_310"),
+      311: i18n("w_311"),
+      312: i18n("w_312"),
+      313: i18n("w_313"),
+      314: i18n("w_314"),
+      315: i18n("w_315"),
+      316: i18n("w_316"),
+      317: i18n("w_317"),
+      318: i18n("w_318"),
+      399: i18n("w_399"),
+      400: i18n("w_400"),
+      401: i18n("w_401"),
+      402: i18n("w_402"),
+      403: i18n("w_403"),
+      404: i18n("w_404"),
+      405: i18n("w_405"),
+      406: i18n("w_406"),
+      407: i18n("w_407"),
+      408: i18n("w_408"),
+      409: i18n("w_409"),
+      410: i18n("w_410"),
+      499: i18n("w_499"),
+      500: i18n("w_500"),
+      501: i18n("w_501"),
+      502: i18n("w_502"),
+      503: i18n("w_503"),
+      504: i18n("w_504"),
+      507: i18n("w_507"),
+      508: i18n("w_508"),
+      509: i18n("w_509"),
+      510: i18n("w_510"),
+      511: i18n("w_511"),
+      512: i18n("w_512"),
+      513: i18n("w_513"),
+      514: i18n("w_514"),
+      515: i18n("w_515"),
+      900: i18n("w_900"),
+      901: i18n("w_901"),
+      999: i18n("w_999")
+    };
+    const u = {
+      alyBGColor(e) {
+        let t = "#36B3FF";
+        switch (e.conditionCode) {
+          case "100":
+          case "101":
+          case "102":
+          case "103":
+          case "104":
+            t = "#0F7CFF";
+            break;
+          case "200":
+          case "201":
+          case "202":
+          case "203":
+          case "204":
+          case "205":
+          case "206":
+            t = "#10BDFF";
+            break;
+          case "207":
+          case "208":
+          case "209":
+          case "210":
+          case "211":
+          case "212":
+            t = "#096BB2";
+            break;
+          case "213":
+          case "900":
+            t = "#FF7F3B";
+            break;
+          case "300":
+          case "301":
+          case "302":
+          case "303":
+          case "304":
+          case "305":
+          case "306":
+          case "307":
+          case "308":
+          case "309":
+          case "310":
+          case "311":
+          case "312":
+          case "313":
+          case "314":
+          case "315":
+          case "316":
+          case "317":
+          case "318":
+          case "399":
+            t = "#427BD1";
+            break;
+          case "301":
+          case "300":
+          case "402":
+          case "403":
+          case "404":
+          case "405":
+          case "406":
+          case "407":
+          case "408":
+          case "409":
+          case "410":
+          case "4991":
+            t = "#87A6D5";
+            break;
+          case "500":
+          case "501":
+          case "502":
+          case "503":
+          case "504":
+          case "505":
+          case "506":
+          case "507":
+          case "508":
+          case "509":
+          case "510":
+          case "511":
+          case "512":
+          case "513":
+          case "514":
+          case "515":
+          case "999":
+            t = "#98A6BD";
+            break;
+          default:
+            t = "#0441C5";
+        }
+        return t;
+      },
+      alyWIcon: e => `${l.a}/weather/code_${e.conditionCode}.png`,
+      alyText: e => d[e.conditionCode]
+    };
+    function p(e, t, i) {
+      let n;
+      let s;
+      if (t === "celsius") {
+        n = e;
+        s = "°C";
+      } else {
+        n = Math.floor(e * 1.8 + 32);
+        s = "°F";
+      }
+      if (i) {
+        n += s;
+      }
+      return n;
+    }
+    var h = i(311);
+    var g = i(13);
+    function b(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    function y(e, t) {
+      var i = {};
+      for (var n in e) {
+        if (Object.prototype.hasOwnProperty.call(e, n) && t.indexOf(n) < 0) {
+          i[n] = e[n];
+        }
+      }
+      if (e != null && typeof Object.getOwnPropertySymbols == "function") {
+        var s = 0;
+        for (n = Object.getOwnPropertySymbols(e); s < n.length; s++) {
+          if (t.indexOf(n[s]) < 0 && Object.prototype.propertyIsEnumerable.call(e, n[s])) {
+            i[n[s]] = e[n[s]];
+          }
+        }
+      }
+      return i;
+    }
+    class m extends r.a {
+      constructor() {
+        super(...arguments);
+        this.localData = {};
+        this.list = [];
+        this.lastUpdated = +new Date();
+        this.unit = "celsius";
+        this.isShowModal = false;
+        this.isShowSetting = false;
+        this.searchState = "none";
+        this.citys = [];
+      }
+      get formateList() {
+        return this.list.filter(e => e.items).map(e => {
+          var t = y(e, []);
+          t.items = t.items.map((e, t) => {
+            var i = y(e, []);
+            if (t === 0) {
+              i._bgColor = u.alyBGColor(i);
+              i._text = u.alyText(i);
+            }
+            i._bgImg = u.alyWIcon(i);
+            return i;
+          });
+          return t;
+        });
+      }
+      sortList(e) {
+        this.list = e;
+      }
+      changeIndex(e, t) {
+        if (e === t) {
+          return;
+        }
+        let n = [...this.list];
+        const s = n.findIndex(t => t.cid === e);
+        if (s === -1) {
+          return;
+        }
+        if (t === "bottom") {
+          const [e] = n.splice(s, 1);
+          n.push(e);
+        } else if (t === "top") {
+          const [e] = n.splice(s, 1);
+          n.unshift(e);
+        } else {
+          const e = n.findIndex(e => e.cid === t);
+          if (e === -1) {
+            return;
+          }
+          const [i] = n.splice(s, 1);
+          n.splice(e, 0, i);
+        }
+        const a = this.list.filter(e => e.top)[0]?.name || "";
+        if (a === e || a === t) {
+          n = this.list.map(e => e.top ? Object.assign(Object.assign({}, e), {
+            top: 0
+          }) : e);
+        }
+        this.list = n;
+      }
+      openModal() {
+        this.isShowModal = true;
+      }
+      closeModal() {
+        this.isShowModal = false;
+        this.searchCitys("");
+      }
+      updateList(e) {
+        this.list = e;
+      }
+      diffRemote(e) {
+        if ((e == null ? undefined : e.list)?.length !== this.list.length) {
+          return true;
+        }
+        if (this.unit !== e.unit) {
+          return true;
+        }
+        return this.list.some((t, i) => t.cid !== e.list[i].cid);
+      }
+      async mergeRemote(e, t) {
+        if (e.list) {
+          try {
+            const i = await this.getWeatherByCid(e.list);
+            Object(a.i)(() => {
+              this.unit = e.unit;
+              if (t) {
+                this.list = i;
+              } else {
+                const e = this.list;
+                const t = i;
+                const {
+                  result: n
+                } = c.a.mergeArray(e, t, "cid", "updateTime");
+                this.list = n;
+              }
+            });
+          } catch (e) {}
+        }
+      }
+      async getWeatherByCid(e) {
+        e = e.filter(e => e.name && e.cid && e.items);
+        return await s.a.all(e.map(async e => {
+          if (e.cid) {
+            const t = await o.h.getForecastWeather(e.cid);
+            if (t == null ? undefined : t.data) {
+              return Object.assign(Object.assign({}, t.data), {
+                name: e.name
+              });
+            }
+          }
+        }));
+      }
+      async initLocal() {
+        const e = await o.h.getLocalCity();
+        Object(a.i)(() => {
+          if (e) {
+            this.localData = e.data;
+          }
+        });
+      }
+      async addCity(e, t) {
+        const {
+          data: i
+        } = await o.h.getForecastWeather(e);
+        if (!i) {
+          throw new Error(i18n("no_current_city_weather_data"));
+        }
+        Object(a.i)(() => {
+          for (const t in this.list) {
+            if (this.list[t].cid === e) {
+              throw new Error(i18n("repeat_city"));
+            }
+          }
+          this.list.push(Object.assign(Object.assign({}, i), {
+            cid: e,
+            name: t
+          }));
+          this.lastUpdated = +new Date();
+          this.closeModal();
+        });
+      }
+      async searchCitys(e) {
+        if (!e) {
+          this.citys = [];
+          this.searchState = "none";
+          return;
+        }
+        this.searchState = "ing";
+        try {
+          const {
+            data: t
+          } = await o.h.getCityList(e);
+          if (t) {
+            Object(a.i)(() => {
+              if (t.status === 200) {
+                this.searchState = "done";
+                const e = t.cities.filter(e => !this.filterCity(e.cid));
+                this.citys = e;
+              }
+            });
+          } else {
+            Object(a.i)(() => {
+              this.searchState = "error";
+            });
+          }
+        } catch (e) {
+          Object(a.i)(() => {
+            this.searchState = "error";
+          });
+        }
+      }
+      filterCity(e) {
+        const t = e.substr(e.length - 1);
+        return /^[a-zA-Z]+$/.test(t);
+      }
+      changeSelected(e, t) {
+        this.citys[e].selected = t;
+      }
+      deleteCityWeather(e) {
+        let t = -1;
+        for (const i in this.list) {
+          if (e === this.list[i].cid) {
+            t = Number(i);
+          }
+        }
+        this.list.splice(t, 1);
+        this.lastUpdated = +new Date();
+      }
+      changeUnit() {
+        this.unit = this.unit === "celsius" ? "fahrenheit" : "celsius";
+        h.a.sendEvent({
+          settingAction: {
+            weatherUnit: this.unit
+          }
+        });
+      }
+      toggleSetting() {
+        this.isShowSetting = !this.isShowSetting;
+      }
+      closeSetting() {
+        this.isShowSetting = false;
+      }
+      reset() {
+        this.isShowSetting = false;
+        this.isShowModal = false;
+      }
+      toTop(e, t) {
+        this.list = this.list.map(i => i.cid === e ? Object.assign(Object.assign({}, i), {
+          top: t === 0 ? 1 : 0
+        }) : Object.assign(Object.assign({}, i), {
+          top: 0
+        })).sort((e, t) => t.top - e.top);
+      }
+      toggleOpen(e) {
+        this.list = this.list.map(t => t.cid === e ? Object.assign(Object.assign({}, t), {
+          open: t.open === 0 ? 1 : 0
+        }) : Object.assign({}, t));
+      }
+    }
+    b([a.g], m.prototype, "localData", undefined);
+    b([a.g], m.prototype, "list", undefined);
+    b([a.g], m.prototype, "lastUpdated", undefined);
+    b([a.g], m.prototype, "unit", undefined);
+    b([a.g], m.prototype, "isShowModal", undefined);
+    b([a.g], m.prototype, "isShowSetting", undefined);
+    b([a.g], m.prototype, "searchState", undefined);
+    b([a.g], m.prototype, "citys", undefined);
+    b([a.e], m.prototype, "formateList", null);
+    b([a.b], m.prototype, "sortList", null);
+    b([a.b], m.prototype, "changeIndex", null);
+    b([a.b], m.prototype, "openModal", null);
+    b([a.b], m.prototype, "closeModal", null);
+    b([a.b], m.prototype, "updateList", null);
+    b([a.b], m.prototype, "mergeRemote", null);
+    b([a.b], m.prototype, "addCity", null);
+    b([a.b], m.prototype, "searchCitys", null);
+    b([a.b], m.prototype, "changeSelected", null);
+    b([a.b], m.prototype, "deleteCityWeather", null);
+    b([a.b], m.prototype, "changeUnit", null);
+    b([a.b], m.prototype, "toggleSetting", null);
+    b([a.b], m.prototype, "closeSetting", null);
+    b([a.b], m.prototype, "reset", null);
+    b([a.b], m.prototype, "toTop", null);
+    b([a.b], m.prototype, "toggleOpen", null);
+    const f = new m();
+    f.initSyncStore(g.o, ["localData", "list", "unit", "lastUpdated"], {});
+    f.initAutoBackup("weather", ["list", "unit"]);
+    const w = () => {
+      const e = f.formateList[0];
+      const t = e == null ? undefined : e.items[0];
+      if (!t) {
+        return {};
+      }
+      return {
+        name: p(t.tmpMax, f.unit, true),
+        bgColor: t._bgColor,
+        bgImg: t._bgImg
+      };
+    };
+    Object(a.c)(() => {
+      if (f.list.some(e => !e || !e.cid)) {
+        if (l.j) {
+          alert("error");
+        }
+        Object(a.i)(() => {
+          f.list = f.list.filter(e => (e == null ? undefined : e.name) && (e == null ? undefined : e.cid) && (e == null ? undefined : e.items));
+        });
+      }
+    });
+  },
+  612: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return y;
+    });
+    i(7);
+    var n = i(2);
+    var s = i(403);
+    var a = i.n(s);
+    var o = i(309);
+    var c = i(430);
+    var r = i(24);
+    var l = i(0);
+    var d = i(251);
+    var u = i(431);
+    var p = i(610);
+    var h = i(13);
+    function g(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    class b extends o.a {
+      constructor() {
+        super(...arguments);
+        this.sites = [];
+        this.editingId = null;
+        this.currentPageIndex = 0;
+        this.redirectVersion = "";
+        this.updatedIconVersion = "";
+        this.mergeSiteArray = (e, t, i) => {
+          const n = e => {
+            if (typeof e == "object") {
+              if (e.target === d.p.target) {
+                return ["target", "uuid"].reduce((t, i) => t + e[i], "");
+              }
+              return Object.keys(e).filter(e => e !== "id" && e !== "updatetime").sort().reduce((t, i) => t + e[i], "");
+            }
+          };
+          const s = (e => {
+            const t = Object.create(null);
+            const i = e => {
+              e.forEach(e => {
+                if (Array.isArray(e)) {
+                  i(e);
+                } else if (e && e.id) {
+                  const s = e.id;
+                  t[s] = e;
+                  if (e.children?.length > 0) {
+                    i(e.children);
+                  }
+                }
+              });
+            };
+            i(e);
+            return t;
+          })(t);
+          const a = (e => {
+            const t = Object.create(null);
+            const i = e => {
+              e.forEach(e => {
+                if (Array.isArray(e)) {
+                  i(e);
+                } else if (typeof e == "object") {
+                  if (e.children?.length > 0) {
+                    i(e.children);
+                  } else {
+                    const i = n(e);
+                    t[i] = true;
+                  }
+                }
+              });
+            };
+            i(e);
+            return t;
+          })(t);
+          let o = false;
+          e.forEach((t, i) => {
+            e[i] = t.filter(e => {
+              const i = s[e.id];
+              const c = e.updatetime || 0;
+              if (e.children?.length > 0) {
+                if (i) {
+                  if (c > (i.updatetime || 0)) {
+                    o = true;
+                    i.name = e.name;
+                  }
+                  e.children.forEach(e => {
+                    if (s[e.id]) {
+                      const t = s[e.id].updatetime || 0;
+                      if ((e.updatetime || 0) > t) {
+                        o = true;
+                        Object.assign(s[e.id], e);
+                      }
+                    } else {
+                      o = true;
+                      i.children.push(e);
+                    }
+                  });
+                  return false;
+                }
+                e.children = e.children.filter(e => {
+                  if (s[e.id]) {
+                    const t = s[e.id].updatetime || 0;
+                    if ((e.updatetime || 0) > t) {
+                      o = true;
+                      Object.assign(s[e.id], e);
+                    }
+                    return false;
+                  }
+                  return true;
+                });
+                return e.children.length !== 0 && (e.children.length === 1 && (Object.assign(e, e.children[0]), delete e.children), true);
+              }
+              {
+                if (!e.updatetime) {
+                  return false;
+                }
+                const t = n(e);
+                if (a[t]) {
+                  return false;
+                }
+                if (i) {
+                  if (c > (i.updatetime || 0)) {
+                    o = true;
+                    Object.assign(s[e.id], e);
+                  }
+                  return false;
+                }
+                return true;
+              }
+            });
+          });
+          const c = [];
+          e.forEach(e => {
+            e.forEach(e => {
+              c.push(e);
+            });
+          });
+          if (c.length > 0 && t.length > 0) {
+            o = true;
+            let e = t.length - 1;
+            c.forEach(n => {
+              if (t[e].length < i) {
+                t[e].push(n);
+              } else {
+                e += 1;
+                t[e] = [n];
+              }
+            });
+          }
+          return {
+            result: t,
+            isLocalEffective: o
+          };
+        };
+        this.convertBackupEquals = e => {
+          const {
+            sites: t
+          } = e;
+          if (t == null ? undefined : t.length) {
+            t.forEach(e => {
+              if (e == null ? undefined : e.length) {
+                e.forEach(e => {
+                  if ((e == null ? undefined : e.uuid) === d.p.uuid) {
+                    e.name = undefined;
+                    e.bgColor = undefined;
+                    e.bgImage = undefined;
+                  } else if (e == null ? undefined : e.children) {
+                    e.children.forEach(e => {
+                      if ((e == null ? undefined : e.uuid) === d.p.uuid) {
+                        e.name = undefined;
+                        e.bgColor = undefined;
+                        e.bgImage = undefined;
+                      }
+                    });
+                  }
+                });
+              }
+            });
+          }
+          return e;
+        };
+        this.reSortTimer = null;
+        this.reSort = (e, t) => {
+          clearTimeout(this.reSortTimer);
+          this.reSortTimer = setTimeout(() => {
+            const i = e * t;
+            const s = this.sites.reduce((e, t) => e.concat(t), []);
+            const a = Array(Math.ceil(s.length / i)).fill(null);
+            Object(n.i)(() => {
+              this.sites = a.map((e, t) => s.slice(t * i, (t + 1) * i));
+            });
+          }, 0);
+        };
+      }
+      get uids() {
+        const e = new Set();
+        if (u.pluginStore.pluginViews.includes("infinity://chatai") || u.pluginStore.pluginViews.includes("infinity://settings") || u.pluginStore.pluginViews.includes("profile")) {
+          this.sites.forEach(t => {
+            t.filter(e => e).forEach(t => {
+              if (t.children) {
+                t.children.forEach(t => {
+                  e.add(t.uuid + "#" + t.target);
+                });
+              } else {
+                e.add(t.uuid + "#" + t.target);
+              }
+            });
+          });
+        }
+        return e;
+      }
+      changeCurrentPage(e) {
+        this.currentPageIndex = e;
+      }
+      diffRemote(e) {
+        const t = e => {
+          if ((e == null ? undefined : e.target) === d.p.target) {
+            const t = {
+              name: undefined,
+              bgColor: undefined,
+              bgImage: undefined
+            };
+            return Object.assign(Object.assign({}, e), t);
+          }
+        };
+        const i = a()(e.sites || [], t);
+        const s = a()(Object(n.j)(this.sites), t);
+        return !n.d.structural(i, s);
+      }
+      mergeRemote(e, t) {
+        if (!e.sites) {
+          return;
+        }
+        const i = Object(p.getCurrentWeather)();
+        if (t) {
+          this.setWeatherIcon(e.sites, i);
+          this.sites = e.sites;
+        } else {
+          const {
+            col: t,
+            row: s
+          } = c.b.setting.layout;
+          const a = t * s;
+          const {
+            result: o
+          } = this.mergeSiteArray(Object(n.j)(this.sites), e.sites, a);
+          this.setWeatherIcon(o, i);
+          this.sites = o;
+        }
+        if (this.sites.length) {
+          if (this.sites.length - 1 < this.currentPageIndex) {
+            document.querySelector("newtab-main").toPage(this.sites.length - 1);
+          }
+        } else {
+          this.currentPageIndex = 0;
+        }
+      }
+      clearEditSite() {
+        this.editingId = null;
+      }
+      setEditSite(e) {
+        this.editingId = e;
+      }
+      delSites(e = [], t = true) {
+        var n;
+        const [a, o, c] = e;
+        let r;
+        let l = null;
+        if (e.length === 2) {
+          r = this.sites[a].splice(o, 1);
+        } else if (e.length === 3) {
+          r = (n = this.sites[a][o]?.children) === null || n === undefined ? undefined : n.splice(c, 1);
+        }
+        if (t) {
+          this.finishingSites(e[0]);
+        }
+        if (e.length === 2 && this.sites[a]?.length === 0) {
+          l = a;
+        }
+        return {
+          data: r,
+          clearPageIndex: l
+        };
+      }
+      insertSite(e = [], t) {
+        var n;
+        const [s, a, o] = e;
+        if (e.length === 2) {
+          if (s !== this.sites.length || this.sites[s]) {
+            this.sites[s].splice(a, 0, t);
+          } else {
+            this.sites.push([t]);
+          }
+        } else if (e.length === 3) {
+          if ((n = this.sites[s][a]?.children) !== null && n !== undefined) {
+            n.splice(o, 0, t);
+          }
+        }
+      }
+      handelStatus(e, t, i, n, s) {
+        const [a] = e;
+        let [o] = t;
+        if (s !== null && s < o) {
+          o -= 1;
+          document.querySelector("newtab-main")._toPrevPage(true);
+        }
+        if (e.length === 3 && i.children.length < 2) {
+          const e = this.findIndex(a, i.id);
+          this.destroyFolder(e);
+          o -= 1;
+        }
+        const c = s !== null ? Math.min(s, o) : o;
+        this.finishingSites(Math.max(c, 0));
+        return this.findIndex(o, n.id);
+      }
+      findIndex(e, t) {
+        const i = [];
+        for (let n = Math.max(e || 0, 0); n < this.sites.length; n++) {
+          const e = this.sites[n];
+          i[0] = n;
+          if (e.find((e, n) => e.id === t ? (i[1] = n, true) : !!e.children && e.children.find((e, s) => e.id === t && (i[1] = n, i[2] = s, true)))) {
+            return i;
+          }
+        }
+      }
+      findIcon(e, t) {
+        let i = {};
+        for (let n = Math.max(e || 0, 0); n < this.sites.length; n++) {
+          if (this.sites[n].some(e => e.id === t ? (i = e, true) : !!e.children && e.children.some(e => e.id === t && (i = e, true)))) {
+            return i;
+          }
+        }
+        return i;
+      }
+      destroyFolder(e) {
+        const [t, i] = e;
+        const n = this.sites[t][i].children;
+        if (n.length === 0) {
+          this.sites[t].splice(i, 1);
+        } else {
+          this.sites[t][i] = n.shift();
+          if (n.length > 0) {
+            this.sites[t].push(...n);
+          }
+        }
+      }
+      manualDestroyFolder(e) {
+        const [t, i] = e;
+        const n = this.sites[t][i].children;
+        this.sites[t].splice(i, 1);
+        const {
+          col: s,
+          row: a
+        } = c.b.setting.layout;
+        const o = s * a - this.sites[t].length;
+        if (o >= n.length) {
+          this.sites[t].push(...n);
+        } else {
+          const e = n.splice(0, o);
+          this.sites[t].push(...e);
+          const i = this.sites.length - 1;
+          this.sites[i].push(...n);
+          this.finishingSites(i);
+        }
+      }
+      finishingSites(e = 0) {
+        const {
+          col: t,
+          row: i
+        } = c.b.setting.layout;
+        const n = t * i;
+        const s = e => {
+          if (this.sites.length <= e) {
+            return;
+          }
+          const t = this.sites[e].length;
+          if (t > n) {
+            const i = e + 1;
+            const a = this.sites[e].splice(n, t - n);
+            if (this.sites.length > i) {
+              this.sites[i].unshift(...a);
+            } else {
+              this.sites.push(a);
+            }
+            s(i);
+          } else if (t === 0) {
+            if (e && e === this.sites.length - 1) {
+              document.querySelector("newtab-main").toPage(e - 1);
+            }
+            this.sites.splice(e, 1);
+            s(e);
+          } else {
+            s(e + 1);
+          }
+        };
+        s(e);
+        for (let e = 0; e < this.sites.length;) {
+          const t = this.sites[e];
+          if (!t || !t.length) {
+            this.sites.splice(e, 1);
+            e -= 1;
+          }
+          e += 1;
+        }
+      }
+      addSite(e, t = 0) {
+        if (this.sites.length > t) {
+          const {
+            col: i,
+            row: n
+          } = c.b.setting.layout;
+          const s = i * n;
+          if (this.sites[t].length < s) {
+            this.sites[t].push(e);
+            return t;
+          } else {
+            return this.addSite(e, t + 1);
+          }
+        }
+        this.sites[t] = [e];
+        return t;
+      }
+      isIcon(e, t) {
+        return !this.findIcon(e, t).children;
+      }
+      changeFolderName(e, t) {
+        const [i, n] = e;
+        this.sites[i][n].name = t;
+        this.sites[i][n].updatetime = Date.now();
+      }
+      setWeatherIcon(e, t) {
+        e.forEach(e => {
+          if (e) {
+            e.forEach(e => {
+              if (e.target === d.p.target) {
+                e.name = t.name || d.p.name;
+                e.bgColor = t.bgColor || d.p.bgColor;
+                e.bgImage = t.bgImg || d.p.bgImage;
+              }
+              if (e.children) {
+                e.children.forEach(e => {
+                  if (e.target === d.p.target) {
+                    e.name = t.name || d.p.name;
+                    e.bgColor = t.bgColor || d.p.bgColor;
+                    e.bgImage = t.bgImg || d.p.bgImage;
+                  }
+                });
+              }
+            });
+          }
+        });
+      }
+      async submitSite(e) {
+        if (e.bgType === "color") {
+          delete e.bgImage;
+        } else if (e.bgType === "image") {
+          delete e.bgFont;
+          delete e.bgText;
+          delete e.bgColorImage;
+          if (e.bgColor === "transparent") {
+            e.bgColor = undefined;
+          }
+        }
+        e.updatetime = await r.a.getTimestamp();
+        if (this.editingId) {
+          const t = document.querySelector("newtab-main").iconSearchShow;
+          const i = this.findIcon(t ? 0 : this.currentPageIndex, this.editingId);
+          let s = {};
+          Object(n.i)(() => {
+            s = Object.assign(i, e);
+            if (s.target === d.p.target) {
+              const e = Object(p.getCurrentWeather)();
+              this.setWeatherIcon(y.sites, e);
+            }
+          });
+        } else {
+          const t = Object.assign({
+            uuid: r.a.randomId("site-"),
+            id: r.a.randomId("siteId-"),
+            type: "web"
+          }, e);
+          const i = y.addSite(t, this.currentPageIndex);
+          if (t.target === d.p.target) {
+            const e = Object(p.getCurrentWeather)();
+            this.setWeatherIcon(y.sites, e);
+          }
+          document.querySelector("newtab-main").toPage(i);
+        }
+        return null;
+      }
+      setRedirectVersion(e) {
+        this.redirectVersion = e;
+      }
+      updateIconData() {
+        if (!l.j && this.updatedIconVersion === "11.0.39") {
+          return;
+        }
+        const e = {
+          [d.g]: {
+            oldTarget: d.f,
+            newTarget: d.e
+          },
+          [d.d]: {
+            oldTarget: d.c,
+            newTarget: d.b
+          }
+        };
+        this.sites.forEach(t => {
+          t.forEach(t => {
+            if (t.children?.length) {
+              t.children.forEach(t => {
+                if (e[t.uuid] && t.target === e[t.uuid].oldTarget) {
+                  t.target = e[t.uuid].newTarget;
+                }
+              });
+            } else if (e[t.uuid] && t.target === e[t.uuid].oldTarget) {
+              t.target = e[t.uuid].newTarget;
+            }
+          });
+        });
+        this.sites = [...this.sites];
+        this.updatedIconVersion = "11.0.39";
+      }
+    }
+    g([n.g], b.prototype, "sites", undefined);
+    g([n.g], b.prototype, "editingId", undefined);
+    g([n.g], b.prototype, "currentPageIndex", undefined);
+    g([n.g], b.prototype, "redirectVersion", undefined);
+    g([n.g], b.prototype, "updatedIconVersion", undefined);
+    g([n.e], b.prototype, "uids", null);
+    g([n.b], b.prototype, "changeCurrentPage", null);
+    g([n.b], b.prototype, "mergeRemote", null);
+    g([n.b], b.prototype, "clearEditSite", null);
+    g([n.b], b.prototype, "setEditSite", null);
+    g([n.b], b.prototype, "delSites", null);
+    g([n.b], b.prototype, "insertSite", null);
+    g([n.b], b.prototype, "destroyFolder", null);
+    g([n.b], b.prototype, "manualDestroyFolder", null);
+    g([n.b], b.prototype, "finishingSites", null);
+    g([n.b], b.prototype, "reSort", undefined);
+    g([n.b], b.prototype, "addSite", null);
+    g([n.b], b.prototype, "changeFolderName", null);
+    g([n.b], b.prototype, "setWeatherIcon", null);
+    g([n.b], b.prototype, "submitSite", null);
+    g([n.b], b.prototype, "setRedirectVersion", null);
+    g([n.b], b.prototype, "updateIconData", null);
+    const y = new b();
+    y.initSyncStore(h.i, ["sites", "redirectVersion", "updatedIconVersion"], {
+      sites: Object(d.m)(l.C.lang)
+    });
+    y.initAutoBackup("site", ["sites"]);
+    Object(n.h)(() => [c.b.setting.layout.col, c.b.setting.layout.row].join(","), () => {
+      if (y.firstSync) {
+        setTimeout(() => {
+          Object(c.a)(false);
+        }, 0);
+      }
+    }, {
+      delay: 0
+    });
+    const m = () => {
+      requestIdleCallback(() => {
+        if (y.firstSync) {
+          y.sites.forEach((e, t) => {
+            if (!e || e.length === 0) {
+              Object(n.i)(() => {
+                y.sites.splice(t, 1);
+              });
+            }
+          });
+          y.sites.forEach((e, t) => {
+            e.forEach((e, i) => {
+              if (!e) {
+                Object(n.i)(() => {
+                  y.sites[t].splice(i, 1);
+                });
+              }
+            });
+          });
+        } else {
+          m();
+        }
+      });
+    };
+    setTimeout(() => {
+      m();
+    }, 60);
+    Object(n.c)(() => {
+      if (p.weatherStore.firstSync) {
+        const e = Object(p.getCurrentWeather)();
+        y.setWeatherIcon(y.sites, e);
+      }
+    }, {
+      delay: 20
+    });
+    Object(n.c)(() => {
+      if (y.firstSync) {
+        requestIdleCallback(() => {
+          y.updateIconData();
+        });
+      }
+    }, {
+      delay: 20
+    });
+    c.b.changeLayout(y.reSort);
+  },
+  613: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return h;
+    });
+    i(7);
+    var n = i(2);
+    var s = i(309);
+    var a = i(251);
+    var o = i(24);
+    var c = i(22);
+    var r = i(0);
+    var l = i(429);
+    var d = i(13);
+    function u(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    class p extends s.a {
+      constructor() {
+        super(...arguments);
+        this.list = [];
+        this.defaultSearch = a.j;
+        this.listHash = "";
+        this.version = "";
+        this.lang = "";
+        this.ignoreSuggest = false;
+        this.searchEngine = {
+          custom: [],
+          addList: [],
+          current: Object(a.l)(),
+          all: []
+        };
+        this.convertBackupEquals = e => {
+          let n = (e == null ? undefined : e.searchEngine)?.all;
+          let s = (e == null ? undefined : e.searchEngine)?.current;
+          n &&= e.searchEngine.all.map(e => e.uuid);
+          s &&= e.searchEngine.current.uuid;
+          if (n || s) {
+            const t = Object.assign(Object.assign({}, e.searchEngine), {
+              all: n,
+              current: s
+            });
+            return Object.assign(Object.assign({}, e), {
+              searchEngine: t
+            });
+          }
+          return e;
+        };
+        this.mergeAddArray = (e = [], t = []) => {
+          const i = "uuid";
+          if (!e || e.length === 0) {
+            return {
+              result: t || [],
+              isLocalEffective: false
+            };
+          }
+          const n = t.filter(e => !!e);
+          const s = e => {
+            if (typeof e == "object") {
+              return Object.keys(e).filter(e => e !== "uuid" && e !== "updatetime").sort().reduce((t, i) => t + e[i], "");
+            }
+          };
+          const a = (e => {
+            const t = Object.create(null);
+            e.forEach(e => {
+              const i = s(e);
+              t[i] = true;
+            });
+            return t;
+          })(t);
+          const o = Object.create(null);
+          t.forEach((e, t) => {
+            if (e[i]) {
+              const n = e[i];
+              o[n] = t;
+            }
+          });
+          let c = false;
+          e.filter(e => e.updatetime !== 0).forEach(e => {
+            const t = s(e);
+            if (a[t]) {
+              return;
+            }
+            const r = e[i];
+            const l = o[r];
+            if (l !== undefined) {
+              if ((n[l].updatetime || 0) < (e.updatetime || 0)) {
+                n[l] = e;
+                c = true;
+              }
+            } else {
+              c = true;
+              n.push(e);
+            }
+          });
+          return {
+            result: n.filter(e => !!e),
+            isLocalEffective: c
+          };
+        };
+      }
+      get allItems() {
+        return [this.defaultSearch, ...this.searchEngine.all];
+      }
+      get baiduSearch() {
+        const e = this.list.find(e => e.uuid === a.a.uuid);
+        if (e) {
+          return e.types[0].url;
+        } else {
+          return "";
+        }
+      }
+      get isCurrentInfinity() {
+        return this.searchEngine.current.uuid === a.j.uuid;
+      }
+      diffRemote(e) {
+        const n = e.searchEngine || {};
+        if (JSON.stringify(n.addList || {}) !== JSON.stringify(this.searchEngine.addList)) {
+          return true;
+        }
+        if (JSON.stringify(n.custom || {}) !== JSON.stringify(this.searchEngine.custom)) {
+          return true;
+        }
+        if (n.current?.uuid !== this.searchEngine.current.uuid) {
+          return true;
+        }
+        if (n.all?.length !== this.searchEngine.all.length) {
+          return true;
+        }
+        return this.searchEngine.all.some((e, t) => {
+          return n.all?.[t]?.uuid !== e.uuid;
+        });
+      }
+      mergeRemote(e, t) {
+        if (e.searchEngine) {
+          if (t) {
+            this.searchEngine = this.transformSearchI18n(e.searchEngine);
+          } else {
+            const t = this.searchEngine.custom;
+            const i = e.searchEngine.custom;
+            const {
+              result: n
+            } = o.a.mergeArray(t, i, "uuid");
+            const s = this.searchEngine.addList;
+            const a = e.searchEngine.addList;
+            const {
+              result: c
+            } = this.mergeAddArray(s, a);
+            const r = this.searchEngine.all;
+            const l = e.searchEngine.all;
+            const {
+              result: d
+            } = o.a.mergeArray(r, l, "uuid");
+            this.searchEngine = this.transformSearchI18n({
+              custom: n,
+              addList: c,
+              current: e.searchEngine.current,
+              all: d
+            });
+          }
+        }
+      }
+      transformSearchI18n(e) {
+        const t = Object.create(null);
+        this.list.forEach(e => {
+          t[e.uuid] = e;
+        });
+        const i = e => t[e.uuid] ? Object.assign(Object.assign({}, e), t[e.uuid]) : e;
+        return {
+          custom: e.custom,
+          addList: e.addList,
+          current: i(e.current),
+          all: e.all.map(e => i(e))
+        };
+      }
+      setActive(e) {
+        this.searchEngine.current = this.allItems[e];
+      }
+      closeSuggestTips() {
+        this.ignoreSuggest = true;
+      }
+      delShortcut(e) {
+        const t = this.searchEngine.all.findIndex(t => t.uuid === e);
+        if (t > -1) {
+          this.searchEngine.all.splice(t, 1);
+        }
+      }
+      updateShortcut(e) {
+        if (e) {
+          if (!this.searchEngine.all.some((t, i) => t.uuid === e.uuid && (this.searchEngine.all[i] = e, true))) {
+            this.searchEngine.all.push(e);
+          }
+          const t = this.searchEngine.current.uuid;
+          if (e.uuid === t) {
+            this.searchEngine.current = e;
+          }
+        }
+      }
+      createEngine(e, t = null) {
+        if (t === null) {
+          const t = o.a.randomId("custom-search-");
+          const i = Object.assign(Object.assign({}, e), {
+            uuid: t
+          });
+          this.searchEngine.custom.push(i);
+          return i;
+        }
+        this.searchEngine.custom[t] = Object.assign(Object.assign({}, this.searchEngine.custom[t]), e);
+        return this.searchEngine.custom[t];
+      }
+      delEngine(e) {
+        const {
+          uuid: t
+        } = this.searchEngine.custom[e];
+        return t !== this.searchEngine.current.uuid && (this.delShortcut(t), this.searchEngine.custom.splice(e, 1), true);
+      }
+      createEngineAdd(e, t = null) {
+        if (t === null) {
+          const t = o.a.randomId("add-search-");
+          const i = Object.assign(Object.assign({}, e), {
+            uuid: t
+          });
+          this.searchEngine.addList.push(Object.assign(Object.assign({}, e), {
+            uuid: t
+          }));
+          return i;
+        }
+        this.searchEngine.addList[t] = Object.assign(Object.assign({}, this.searchEngine.addList[t]), e);
+        return this.searchEngine.addList[t];
+      }
+      delEngineAdd(e) {
+        this.searchEngine.addList.splice(e, 1);
+        return true;
+      }
+      transformSearchList(e) {
+        const t = {};
+        e.forEach(e => {
+          if (e.searchParams) {
+            t[e.uuid] = e.searchParams;
+          }
+        });
+        return this.list.map(e => {
+          if (t[e.uuid]) {
+            const i = e.types[0].url;
+            const n = t[e.uuid];
+            let s = i;
+            try {
+              const e = new URL(i);
+              const [t, a] = [...e.searchParams].pop() || [""];
+              if (a === "") {
+                e.searchParams.delete(t);
+              }
+              Object.keys(n).forEach(t => {
+                if (n[t] === null) {
+                  e.searchParams.delete(t);
+                } else {
+                  e.searchParams.set(t, n[t]);
+                }
+              });
+              if (a === "") {
+                e.searchParams.append(t, a);
+              }
+              s = e.toString();
+            } catch (e) {}
+            return Object.assign(Object.assign({}, e), {
+              types: e.types.map((e, t) => t === 0 ? Object.assign(Object.assign({}, e), {
+                url: s
+              }) : e)
+            });
+          }
+          return e;
+        });
+      }
+      async getEnginesList() {
+        let e = this.version;
+        if (this.lang !== r.C.lang) {
+          e = "";
+        }
+        const {
+          data: t,
+          error: i
+        } = await c.c.getEnginesList(e);
+        if (!i && (Object(n.i)(() => {
+          this.version = t.meta?.version;
+          this.lang = r.C.lang;
+        }), t.hash !== this.listHash)) {
+          const e = this.transformSearchList(t.list);
+          if (l.userStore.isLogin) {
+            this.updateEngines({
+              list: e,
+              listHash: t.hash
+            });
+          } else {
+            this.stopAutoBackupReaction();
+            try {
+              this.updateEngines({
+                list: e,
+                listHash: t.hash
+              });
+            } catch (i) {}
+            this.restartAutoBackupReaction();
+          }
+        }
+      }
+      updateEngines({
+        list: e,
+        listHash: t
+      }) {
+        this.list = e;
+        this.listHash = t;
+        const i = {};
+        e.forEach(e => {
+          i[e.uuid] = e;
+        });
+        const n = this.searchEngine.current.uuid;
+        if (i[n]) {
+          this.searchEngine.current = i[n];
+        }
+        const s = this.defaultSearch.uuid;
+        if (i[s]) {
+          this.defaultSearch = i[s];
+        }
+        const a = [];
+        this.searchEngine.all.forEach(e => {
+          const t = e.uuid;
+          if (i[t]) {
+            if (e.updatetime === 0) {
+              a.push(Object.assign(Object.assign({}, i[t]), {
+                updatetime: 0
+              }));
+            } else {
+              a.push(Object.assign({}, i[t]));
+            }
+          } else {
+            a.push(e);
+          }
+        });
+        this.searchEngine.all = a;
+      }
+      sortShortcut(e, t) {
+        if (e === t) {
+          return;
+        }
+        const i = [...this.searchEngine.all];
+        const n = i.findIndex(t => t.uuid === e);
+        if (n !== -1) {
+          if (t === "all") {
+            const [e] = i.splice(n, 1);
+            i.push(e);
+          } else {
+            const e = i.findIndex(e => e.uuid === t);
+            if (e === -1) {
+              return;
+            }
+            const [s] = i.splice(n, 1);
+            i.splice(e, 0, s);
+          }
+          this.searchEngine.all = i;
+        }
+      }
+    }
+    u([n.g], p.prototype, "list", undefined);
+    u([n.g], p.prototype, "defaultSearch", undefined);
+    u([n.g], p.prototype, "listHash", undefined);
+    u([n.g], p.prototype, "version", undefined);
+    u([n.g], p.prototype, "lang", undefined);
+    u([n.g], p.prototype, "ignoreSuggest", undefined);
+    u([n.g], p.prototype, "searchEngine", undefined);
+    u([n.e], p.prototype, "allItems", null);
+    u([n.e], p.prototype, "baiduSearch", null);
+    u([n.e], p.prototype, "isCurrentInfinity", null);
+    u([n.b], p.prototype, "mergeRemote", null);
+    u([n.b], p.prototype, "setActive", null);
+    u([n.b], p.prototype, "closeSuggestTips", null);
+    u([n.b], p.prototype, "delShortcut", null);
+    u([n.b], p.prototype, "updateShortcut", null);
+    u([n.b], p.prototype, "createEngine", null);
+    u([n.b], p.prototype, "delEngine", null);
+    u([n.b], p.prototype, "createEngineAdd", null);
+    u([n.b], p.prototype, "delEngineAdd", null);
+    u([n.b], p.prototype, "getEnginesList", null);
+    u([n.b], p.prototype, "updateEngines", null);
+    u([n.b], p.prototype, "sortShortcut", null);
+    const h = new p();
+    h.initSyncStore(d.g, ["searchEngine", "list", "listHash", "ignoreSuggest", "version", "lang"], {
+      list: a.n,
+      searchEngine: {
+        custom: [],
+        addList: [],
+        current: Object(a.l)(),
+        all: Object(a.k)()
+      }
+    });
+    h.initAutoBackup("searcher", ["searchEngine"]);
+    Object(n.c)(() => {
+      if (h.firstSync) {
+        h.getEnginesList();
+      }
+    });
+  },
+  614: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return h;
+    });
+    i(7);
+    var n = i(2);
+    var s = i(403);
+    var a = i.n(s);
+    var o = i(309);
+    var c = i(22);
+    var r = i(24);
+    var l = i(13);
+    function d(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    const u = [{
+      title: "",
+      content: "",
+      time: +new Date(),
+      id: "note-default-1ehj4oc7ubn8bgu9zb2spjip0vj",
+      updatetime: 0,
+      fontSize: 14
+    }];
+    class p extends o.a {
+      constructor() {
+        super(...arguments);
+        this.linkModal = false;
+        this.list = u;
+        this.checkedId = this.list[0].id;
+        this.boldActive = false;
+      }
+      toogleLinkModal() {
+        this.linkModal = !this.linkModal;
+      }
+      setBoldActive(e) {
+        this.boldActive = e;
+      }
+      get isEmpty() {
+        return this.list.length === 0;
+      }
+      get checkedNote() {
+        if (this.checkedId) {
+          return this.list.filter(e => e.id === this.checkedId)[0];
+        } else {
+          return this.list[0];
+        }
+      }
+      get noteList() {
+        const e = [];
+        const t = [];
+        this.list.forEach(i => {
+          if (i.sticky) {
+            e.push(i);
+          } else {
+            t.push(i);
+          }
+        });
+        return e.concat(t);
+      }
+      diffRemote(e) {
+        const t = e => {
+          if (e == null ? undefined : e.updatetime) {
+            const t = {
+              updatetime: undefined
+            };
+            return Object.assign(Object.assign({}, e), t);
+          }
+        };
+        const i = a()(e.list || [], t);
+        const s = a()(Object(n.j)(this.list), t);
+        return !n.d.structural(i, s);
+      }
+      mergeRemote(e, t) {
+        if (e.list) {
+          if (t) {
+            this.list = e.list;
+            this.checkedId = e.checkedId;
+          } else {
+            const t = this.list;
+            const i = e.list;
+            this.checkedId = e.checkedId;
+            const {
+              result: n
+            } = r.a.mergeArray(t, i);
+            this.list = n;
+          }
+        }
+      }
+      async add({
+        title: e = "",
+        content: t = ""
+      }) {
+        const i = r.a.randomId("note-");
+        const s = await r.a.getTimestamp();
+        const a = {
+          title: e,
+          content: t,
+          time: +new Date(),
+          id: i,
+          updatetime: s,
+          fontSize: 14
+        };
+        Object(n.i)(() => {
+          this.list = [a, ...this.list];
+          this.checkedId = i;
+        });
+      }
+      delete(e) {
+        this.list = this.list.filter(t => t.id !== e);
+        if (e === this.checkedId && !this.isEmpty) {
+          this.checkedId = this.list[0].id;
+        }
+      }
+      setTop(e) {
+        const t = this.list.findIndex(t => t.id === e);
+        if (t !== -1) {
+          const [e] = this.list.splice(t, 1);
+          e.sticky = true;
+          this.list.unshift(e);
+        }
+      }
+      cancelSetTop(e) {
+        const t = this.list.findIndex(t => t.id === e);
+        if (t !== -1) {
+          const [e] = this.list.splice(t, 1);
+          e.sticky = false;
+          this.list.unshift(e);
+        }
+      }
+      updateId(e) {
+        this.checkedId = e;
+      }
+      async updateNote(e) {
+        const t = await r.a.getTimestamp();
+        Object(n.i)(() => {
+          if (this.list?.length) {
+            this.list = this.list.map(i => i.id === e.id ? Object.assign(Object.assign(Object.assign({}, i), e), {
+              updatetime: t
+            }) : Object.assign({}, i));
+          }
+        });
+      }
+      async upload(e, t) {
+        const {
+          data: s,
+          error: a
+        } = await c.e.uploadFile(e, t + ".png", "infinity-notes-img");
+        if (a) {
+          return {
+            error: a.response?.data?.error ? a.response.data.error : a.message,
+            data: ""
+          };
+        }
+        return {
+          data: s,
+          error: ""
+        };
+      }
+    }
+    d([n.g], p.prototype, "linkModal", undefined);
+    d([n.b], p.prototype, "toogleLinkModal", null);
+    d([n.g], p.prototype, "list", undefined);
+    d([n.g], p.prototype, "checkedId", undefined);
+    d([n.g], p.prototype, "boldActive", undefined);
+    d([n.b], p.prototype, "setBoldActive", null);
+    d([n.e], p.prototype, "isEmpty", null);
+    d([n.e], p.prototype, "checkedNote", null);
+    d([n.e], p.prototype, "noteList", null);
+    d([n.b], p.prototype, "mergeRemote", null);
+    d([n.b], p.prototype, "add", null);
+    d([n.b], p.prototype, "delete", null);
+    d([n.b], p.prototype, "setTop", null);
+    d([n.b], p.prototype, "cancelSetTop", null);
+    d([n.b], p.prototype, "updateId", null);
+    d([n.b], p.prototype, "updateNote", null);
+    d([n.b], p.prototype, "upload", null);
+    const h = new p();
+    h.initSyncStore(l.d, ["list", "checkedId"], {});
+    h.initAutoBackup("note", ["list", "checkedId"]);
+  },
+  624: function (e, t, i) {
+    "use strict";
+
+    i.d(t, "a", function () {
+      return r;
+    });
+    var n = i(13);
+    var s = i(2);
+    var a = i(309);
+    function o(e, t, i, n) {
+      var s;
+      var a = arguments.length;
+      var o = a < 3 ? t : n === null ? n = Object.getOwnPropertyDescriptor(t, i) : n;
+      if (typeof Reflect == "object" && typeof Reflect.decorate == "function") {
+        o = Reflect.decorate(e, t, i, n);
+      } else {
+        for (var c = e.length - 1; c >= 0; c--) {
+          if (s = e[c]) {
+            o = (a < 3 ? s(o) : a > 3 ? s(t, i, o) : s(t, i)) || o;
+          }
+        }
+      }
+      if (a > 3 && o) {
+        Object.defineProperty(t, i, o);
+      }
+      return o;
+    }
+    class c extends a.a {
+      constructor() {
+        super(...arguments);
+        this.onlyOneItem = false;
+        this.ready = false;
+      }
+      initStore() {
+        return this.initSyncStore(n.m, ["onlyOneItem", "ready", "nextId", "nextRawURL", "nextURL", "nextItem"]);
+      }
+      setOnlyOneItem(e) {
+        this.onlyOneItem = e;
+      }
+      setReady(e) {
+        this.ready = e;
+      }
+      setNextId(e) {
+        this.nextId = e;
+      }
+      setNextRawURL(e) {
+        this.nextRawURL = e;
+      }
+      setNextURL(e) {
+        this.nextURL = e;
+      }
+      setNextItem(e) {
+        this.nextItem = e;
+      }
+      clearNextData() {
+        this.nextURL = undefined;
+        this.nextRawURL = undefined;
+        this.nextId = undefined;
+        this.nextItem = null;
+      }
+    }
+    o([s.g], c.prototype, "onlyOneItem", undefined);
+    o([s.g], c.prototype, "ready", undefined);
+    o([s.g], c.prototype, "nextId", undefined);
+    o([s.g], c.prototype, "nextRawURL", undefined);
+    o([s.g], c.prototype, "nextURL", undefined);
+    o([s.g], c.prototype, "nextItem", undefined);
+    o([s.b], c.prototype, "setOnlyOneItem", null);
+    o([s.b], c.prototype, "setReady", null);
+    o([s.b], c.prototype, "setNextId", null);
+    o([s.b], c.prototype, "setNextRawURL", null);
+    o([s.b], c.prototype, "setNextURL", null);
+    o([s.b], c.prototype, "setNextItem", null);
+    o([s.b], c.prototype, "clearNextData", null);
+    const r = new c();
+  }
+}]);

@@ -1,0 +1,64 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon/pro128.png",
+         "32": "icon/pro32.png",
+         "96": "icon/pro96.png"
+      },
+      "default_popup": "popup/index.html",
+      "default_title": "__MSG_add_to_infinity__"
+   },
+   "background": {
+      "service_worker": "serviceworker.js"
+   },
+   "chrome_url_overrides": {
+      "newtab": "newtab/index.html"
+   },
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'none'"
+   },
+   "default_locale": "en_US",
+   "description": "__MSG_extension_des_pro__",
+   "icons": {
+      "128": "icon/pro128.png",
+      "32": "icon/pro32.png",
+      "96": "icon/pro96.png"
+   },
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "OpenTab",
+   "optional_host_permissions": [
+      "https://google.com/",
+      "https://suggestion.baidu.com/",
+      "https://mail.google.com/",
+      "<all_urls>"
+   ],
+   "optional_permissions": [
+      "notifications",
+      "bookmarks",
+      "topSites",
+      "history",
+      "favicon",
+      "management"
+   ],
+   "permissions": [
+      "activeTab",
+      "storage",
+      "unlimitedStorage",
+      "offscreen",
+      "background",
+      "search"
+   ],
+   "version": "11.0.41",
+   "web_accessible_resources": [
+      {
+         "matches": [
+            "<all_urls>"
+         ],
+         "resources": [
+            "_favicon/*"
+         ]
+      }
+   ],
+   "author": "jimmyu725"
+}

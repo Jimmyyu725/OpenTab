@@ -1,0 +1,27 @@
+(window.webpackJsonp = window.webpackJsonp || []).push([[10], {
+  603: function (n, r, e) {
+    "use strict";
+
+    e.r(r);
+    e.d(r, "createWorkBox", function () {
+      return i;
+    });
+    e(7);
+    var t = e(0);
+    let o = null;
+    const i = async () => {
+      if (o) {
+        return o;
+      }
+      if (t.s && "serviceWorker" in navigator) {
+        const {
+          Workbox: n
+        } = await e.e(42).then(e.bind(null, 806));
+        o = new n("/serviceworker.js?v=1783058950124");
+        o.register();
+        return o;
+      }
+      return null;
+    };
+  }
+}]);

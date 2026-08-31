@@ -1,0 +1,14 @@
+{
+  "name": "opentab",
+  "version": "1.0.0",
+  "private": true,
+  "author": "jimmyu725",
+  "description": "OpenTab Chrome new-tab extension",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
