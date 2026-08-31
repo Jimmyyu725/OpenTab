@@ -1366,7 +1366,7 @@
    "privacy_data_item_9": {
       "message": "El kell fogadnia ezt az adatvédelmi irányelvet, mielőtt használhatja ezt a kiterjesztést. Tekintse meg a $the_OpenTab_privacy$, hogy többet megtudjon.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

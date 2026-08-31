@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "이 확장 프로그램을 사용할 수 있기 전에이 개인 정보 보호 정책에 동의해야합니다. 우리의 $the_OpenTab_privacy$ 를 봅니다.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

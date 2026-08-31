@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Du måste godkänna denna sekretesspolicy innan du kan använda den här förlängningen. Visa vår $the_OpenTab_privacy$ för att lära dig mer.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

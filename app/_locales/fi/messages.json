@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Sinun on hyväksyttävä tämä tietosuojakäytäntö ennen kuin voit käyttää tätä laajennusta. Tarkastele $the_OpenTab_privacy$ saadaksesi lisätietoja.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

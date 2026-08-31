@@ -1366,7 +1366,7 @@
    "privacy_data_item_9": {
       "message": "Bu uzantıyı kullanmadan önce bu Gizlilik Politikasını kabul etmelisiniz. $the_OpenTab_privacy$'ı daha fazla bilgi edinin.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

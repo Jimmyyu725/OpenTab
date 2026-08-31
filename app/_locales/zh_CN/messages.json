@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "您必须同意此隐私政策，才可以使用该扩展，您也可以查看我们的$the_OpenTab_privacy$以了解更多。",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

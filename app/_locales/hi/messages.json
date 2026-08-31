@@ -1366,7 +1366,7 @@
    "privacy_data_item_9": {
       "message": "इस एक्सटेंशन का उपयोग करने से पहले आपको इस गोपनीयता नीति से सहमत होना चाहिए। अधिक जानने के लिए हमारी $the_OpenTab_privacy$ देखें।",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

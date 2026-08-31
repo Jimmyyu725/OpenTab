@@ -1366,7 +1366,7 @@
    "privacy_data_item_9": {
       "message": "Musisz zgodzić się na tę politykę prywatności, zanim będziesz mógł korzystać z tego rozszerzenia. Zobacz nasz $the_OpenTab_privacy$, aby dowiedzieć się więcej.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

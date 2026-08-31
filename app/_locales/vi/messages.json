@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Bạn phải đồng ý với chính sách quyền riêng tư này trước khi bạn có thể sử dụng tiện ích mở rộng này. Xem $the_OpenTab_privacy$ để tìm hiểu thêm.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

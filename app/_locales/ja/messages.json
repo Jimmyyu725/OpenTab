@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "この拡張機能を使用する前に、このプライバシーポリシーに同意する必要があります。 詳しくは$the_OpenTab_privacy$を表示してください。",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

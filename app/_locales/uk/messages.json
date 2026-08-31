@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Ви повинні погодитися з цією політикою конфіденційності, перш ніж ви зможете використовувати це розширення. Переглянути нашу $the_OpenTab_privacy$, щоб дізнатися більше.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

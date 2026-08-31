@@ -36,12 +36,23 @@ for (const path of [...appJs, ...sourceJs]) {
 
 const localeFiles = appFiles.filter((path) => /\/_locales\/[^/]+\/messages\.json$/.test(path));
 let oldVisibleBranding = 0;
+let undefinedLocalePlaceholders = 0;
+let firstUndefinedLocalePlaceholder;
 for (const path of localeFiles) {
   const messages = JSON.parse(await readFile(path, "utf8"));
   const text = Object.values(messages).map((entry) => entry?.message ?? "").join("\n");
   if (/infinity|hitab|wetab/i.test(text)) oldVisibleBranding += 1;
+  for (const [key, entry] of Object.entries(messages)) {
+    const placeholders = new Set(Object.keys(entry?.placeholders ?? {}));
+    for (const match of (entry?.message ?? "").matchAll(/\$([A-Za-z][A-Za-z0-9_@]*)\$/g)) {
+      if (placeholders.has(match[1])) continue;
+      undefinedLocalePlaceholders += 1;
+      firstUndefinedLocalePlaceholder ??= `${path}:${key}:$${match[1]}$`;
+    }
+  }
 }
 if (oldVisibleBranding) throw new Error(`${oldVisibleBranding} locale files contain old visible branding`);
+if (undefinedLocalePlaceholders) throw new Error(`${undefinedLocalePlaceholders} undefined locale placeholders; first=${firstUndefinedLocalePlaceholder}`);
 if (appJs.length !== 58 || sourceJs.length !== 58 || localeFiles.length !== 35) throw new Error("Unexpected project file counts");
 
-console.log(`OK project=OpenTab author=jimmyu725 app_files=${appFiles.length} app_js=${appJs.length} source_js=${sourceJs.length} locales=${localeFiles.length} old_visible_branding=${oldVisibleBranding}`);
+console.log(`OK project=OpenTab author=jimmyu725 app_files=${appFiles.length} app_js=${appJs.length} source_js=${sourceJs.length} locales=${localeFiles.length} old_visible_branding=${oldVisibleBranding} undefined_locale_placeholders=${undefinedLocalePlaceholders}`);

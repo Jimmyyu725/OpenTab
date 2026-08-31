@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "คุณต้องยอมรับนโยบายความเป็นส่วนตัวนี้ก่อนที่คุณจะสามารถใช้นามสกุลนี้ได้ ดู $the_OpenTab_privacy$ เพื่อเรียนรู้เพิ่มเติม",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

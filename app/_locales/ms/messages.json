@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Anda mesti setuju dengan polisi privasi ini sebelum anda boleh guna sambungan ini.Lihat $the_OpenTab_privacy$ kita untuk belajar lebih banyak.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

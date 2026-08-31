@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Du skal acceptere denne privatlivspolitik, før du kan bruge denne udvidelse. Se vores $the_OpenTab_privacy$ for at lære mere.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }

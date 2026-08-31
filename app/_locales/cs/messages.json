@@ -1371,7 +1371,7 @@
    "privacy_data_item_9": {
       "message": "Před tímto rozšířením musíte souhlasit s tímto zásadami ochrany osobních údajů. Podívejte se na naše $the_OpenTab_privacy$ abyste se dozvěděli více.",
       "placeholders": {
-         "the_infinity_privacy": {
+         "the_OpenTab_privacy": {
             "content": "$1"
          }
       }
